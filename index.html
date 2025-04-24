@@ -31,6 +31,8 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <!-- Devicons for hamburger menu -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
     <!-- Typed.js CDN -->
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <!-- Leaflet CSS -->
@@ -50,44 +52,95 @@
   <body class="bg-gray-50 font-sans">
     <header class="navbar fixed top-0 w-full z-50">
       <nav class="container mx-auto py-4 px-6">
-        <ul class="flex flex-wrap justify-center space-x-4 md:space-x-8">
-          <li>
-            <a
-              href="#about"
-              class="text-gray-800 hover:text-primary font-medium transition-colors px-2 py-1"
-              >About Me</a
-            >
-          </li>
-          <li>
-            <a
-              href="#tech-stack"
-              class="text-gray-800 hover:text-primary font-medium transition-colors px-2 py-1"
-              >Tech Stack</a
-            >
-          </li>
-
-          <li>
-            <a
-              href="#projects"
-              class="text-gray-800 hover:text-primary font-medium transition-colors px-2 py-1"
-              >My Projects</a
-            >
-          </li>
-          <li>
-            <a
-              href="#achievements"
-              class="text-gray-800 hover:text-primary font-medium transition-colors px-2 py-1"
-              >Achievements</a
-            >
-          </li>
-          <li>
-            <a
-              href="#contact"
-              class="text-gray-800 hover:text-primary font-medium transition-colors px-2 py-1"
-              >Contact Me</a
-            >
-          </li>
-        </ul>
+        <div class="flex justify-between items-center">
+          <div class="text-2xl font-bold gradient-text">Baibhab Adhikari</div>
+          <div class="block md:hidden">
+            <button id="mobile-menu-button" class="text-gray-800 hover:text-primary focus:outline-none relative z-50">
+              <div class="hamburger-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </button>
+          </div>
+          <ul class="hidden md:flex flex-wrap justify-center space-x-4 md:space-x-8" id="desktop-menu">
+            <li>
+              <a
+                href="#about"
+                class="text-gray-800 hover:text-primary font-medium transition-colors px-2 py-1"
+                >About Me</a
+              >
+            </li>
+            <li>
+              <a
+                href="#tech-stack"
+                class="text-gray-800 hover:text-primary font-medium transition-colors px-2 py-1"
+                >Tech Stack</a
+              >
+            </li>
+            <li>
+              <a
+                href="#projects"
+                class="text-gray-800 hover:text-primary font-medium transition-colors px-2 py-1"
+                >My Projects</a
+              >
+            </li>
+            <li>
+              <a
+                href="#achievements"
+                class="text-gray-800 hover:text-primary font-medium transition-colors px-2 py-1"
+                >Achievements</a
+              >
+            </li>
+            <li>
+              <a
+                href="#contact"
+                class="text-gray-800 hover:text-primary font-medium transition-colors px-2 py-1"
+                >Contact Me</a
+              >
+            </li>
+          </ul>
+        </div>
+        <!-- Mobile menu, hidden by default -->
+        <div id="mobile-menu" class="md:hidden hidden mt-4">
+          <ul class="flex flex-col space-y-2">
+            <li>
+              <a
+                href="#about"
+                class="block text-gray-800 hover:text-primary font-medium transition-colors px-2 py-1"
+                >About Me</a
+              >
+            </li>
+            <li>
+              <a
+                href="#tech-stack"
+                class="block text-gray-800 hover:text-primary font-medium transition-colors px-2 py-1"
+                >Tech Stack</a
+              >
+            </li>
+            <li>
+              <a
+                href="#projects"
+                class="block text-gray-800 hover:text-primary font-medium transition-colors px-2 py-1"
+                >My Projects</a
+              >
+            </li>
+            <li>
+              <a
+                href="#achievements"
+                class="block text-gray-800 hover:text-primary font-medium transition-colors px-2 py-1"
+                >Achievements</a
+              >
+            </li>
+            <li>
+              <a
+                href="#contact"
+                class="block text-gray-800 hover:text-primary font-medium transition-colors px-2 py-1"
+                >Contact Me</a
+              >
+            </li>
+          </ul>
+        </div>
       </nav>
     </header>
 

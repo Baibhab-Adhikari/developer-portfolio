@@ -20,6 +20,39 @@ window.addEventListener("scroll", () => {
 
 // DOM content loaded event
 document.addEventListener("DOMContentLoaded", function() {
+  // Mobile menu toggle functionality
+  const mobileMenuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const hamburgerIcon = document.querySelector('.menu-icon');
+
+  if (mobileMenuButton && mobileMenu) {
+    mobileMenuButton.addEventListener('click', function() {
+      mobileMenu.classList.toggle('hidden');
+      mobileMenu.classList.toggle('active');
+      document.body.classList.toggle('mobile-menu-open');
+      
+      // Toggle hamburger icon animation
+      if (hamburgerIcon) {
+        hamburgerIcon.classList.toggle('active');
+      }
+    });
+    
+    // Close mobile menu when clicking on a link
+    const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+    mobileMenuLinks.forEach(link => {
+      link.addEventListener('click', function() {
+        mobileMenu.classList.add('hidden');
+        mobileMenu.classList.remove('active');
+        document.body.classList.remove('mobile-menu-open');
+        
+        // Reset hamburger icon
+        if (hamburgerIcon) {
+          hamburgerIcon.classList.remove('active');
+        }
+      });
+    });
+  }
+
   // Initialize Typed.js
   const typed = new Typed("#type-animation", {
     strings: [
