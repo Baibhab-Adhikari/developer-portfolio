@@ -4,14 +4,14 @@
 .navbar {
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    background: rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.4); /* Reduced opacity from 0.6 to 0.4 for enhanced glass effect */
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
     transition: all 0.3s ease;
 }
 
 .navbar.scrolled {
-    background: rgba(255, 255, 255, 0.75);
+    background: rgba(255, 255, 255, 0.6); /* Also reduced the scrolled opacity from 0.75 to 0.6 */
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 

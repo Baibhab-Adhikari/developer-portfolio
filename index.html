@@ -83,7 +83,7 @@
         class="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between"
       >
         <div class="md:w-1/2 text-left">
-            <h1 class="text-5xl md:text-6xl font-bold mb-6">Hi I'm</h1>
+          <h1 class="text-5xl md:text-6xl font-bold mb-6">Hi I'm</h1>
           <h1 class="gradient-text text-5xl md:text-6xl font-bold mb-6">
             Baibhab Adhikari
           </h1>
@@ -94,19 +94,27 @@
             Passionate about creating user-friendly web applications and solving
             complex problems with elegant solutions.
           </p>
-          <a
-            href="#contact"
-            class="bg-black hover:bg-gray-800 text-white py-3 px-8 rounded-lg font-medium shadow-md transition transform hover:-translate-y-0.5 btn-glow"
-            >Get in Touch</a
-          >
+          <div class="flex flex-wrap gap-4">
+            <a
+              href="#contact"
+              class="bg-black hover:bg-gray-800 text-white py-3 px-8 rounded-lg font-medium shadow-md transition transform hover:-translate-y-0.5 btn-glow"
+              >Get in Touch</a
+            >
+            <a
+              href="/assets/Baibhab_Adhikari_Resume.pdf"
+              download
+              class="inline-flex items-center justify-center bg-white border-2 border-black hover:bg-gray-100 text-black py-3 px-6 rounded-lg font-medium shadow-md transition transform hover:-translate-y-0.5"
+              ><i class="fas fa-file-download mr-2"></i>Download Resume</a
+            >
+          </div>
         </div>
         <div class="md:w-1/3 flex justify-center items-center md:mt-0 mt-12">
           <div class="profile-image-container">
-            <img 
-              src="assets/img1.jpeg" 
-              alt="Baibhab Adhikari" 
+            <img
+              src="assets/img1.jpeg"
+              alt="Baibhab Adhikari"
               class="rounded-full w-64 h-64 object-cover border-4 border-white shadow-lg"
-            >
+            />
           </div>
         </div>
       </div>
@@ -116,15 +124,20 @@
       <div class="container mx-auto px-6 max-w-3xl">
         <h2 class="text-4xl font-bold text-center mb-16 relative">About Me</h2>
         <p class="text-gray-700 text-center mb-4">
-          I am a passionate software developer with expertise in building web
-          applications. With a strong foundation in Python and web technologies,
-          I create efficient, scalable, and user-friendly solutions to solve
+          I am an engineering student passionate about machine learning and AI
+          with a strong foundation in Python development. My goal is to become a
+          skilled ML engineer who can build intelligent systems that solve
           real-world problems.
         </p>
+        <p class="text-gray-700 text-center mb-4">
+          Currently, I'm expanding my skill set by diving deep into backend
+          technologies and deployment strategies to create end-to-end ML
+          solutions that are both powerful and production-ready.
+        </p>
         <p class="text-gray-700 text-center">
-          My journey in tech started with a curiosity about how things work,
-          which has evolved into a career focused on creating impactful digital
-          experiences.
+          My journey combines engineering fundamentals with continuous learning
+          in data science, helping me bridge the gap between theoretical models
+          and practical applications.
         </p>
       </div>
     </section>
@@ -238,14 +251,19 @@
         <h2 class="text-4xl font-bold text-center mb-16 relative">
           My Projects
         </h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           <div
             class="bg-white rounded-xl overflow-hidden shadow-lg hover:-translate-y-2 transition-transform duration-300"
           >
             <div
-              class="bg-gray-200 h-48 flex items-center justify-center text-gray-400"
+              class="bg-gray-200 flex items-center justify-center text-gray-400 overflow-hidden"
+              style="height: auto; max-height: 250px"
             >
-              <img src="/assets/home.png" alt="">
+              <img
+                src="/assets/home.png"
+                alt="CatVault homepage"
+                class="w-full object-contain"
+              />
             </div>
             <div class="p-6">
               <h3 class="text-xl font-bold mb-2">CatVault</h3>
@@ -253,7 +271,8 @@
                 A password generator and manager built with Flask
               </p>
               <a
-                href="https://github.com"
+                href="https://github.com/Baibhab-Adhikari/CatVault"
+                target="_blank"
                 class="inline-block bg-black text-white py-2 px-6 rounded-lg font-medium hover:bg-gray-800 transition-colors btn-glow"
                 >View on GitHub</a
               >
@@ -264,38 +283,23 @@
             class="bg-white rounded-xl overflow-hidden shadow-lg hover:-translate-y-2 transition-transform duration-300"
           >
             <div
-              class="bg-gray-200 h-48 flex items-center justify-center text-gray-400"
+              class="bg-gray-200 flex items-center justify-center text-gray-400 overflow-hidden"
+              style="height: auto; max-height: 250px"
             >
-              [Project Image]
+              <img
+                src="/assets/landing.png"
+                alt="ATS Eureka homepage"
+                class="w-full object-contain"
+              />
             </div>
             <div class="p-6">
-              <h3 class="text-xl font-bold mb-2">Project Two</h3>
+              <h3 class="text-xl font-bold mb-2">ATS Eureka</h3>
               <p class="text-gray-500 mb-6">
-                Data visualization dashboard with Python
+                ATS system made using FastAPI, MongoDB, Docker, Redis
               </p>
               <a
-                href="https://github.com"
-                class="inline-block bg-black text-white py-2 px-6 rounded-lg font-medium hover:bg-gray-800 transition-colors btn-glow"
-                >View on GitHub</a
-              >
-            </div>
-          </div>
-
-          <div
-            class="bg-white rounded-xl overflow-hidden shadow-lg hover:-translate-y-2 transition-transform duration-300"
-          >
-            <div
-              class="bg-gray-200 h-48 flex items-center justify-center text-gray-400"
-            >
-              [Project Image]
-            </div>
-            <div class="p-6">
-              <h3 class="text-xl font-bold mb-2">Project Three</h3>
-              <p class="text-gray-500 mb-6">
-                Serverless application deployed on Heroku
-              </p>
-              <a
-                href="https://github.com"
+                href="https://github.com/Baibhab-Adhikari/ATS-Eureka"
+                target="_blank"
                 class="inline-block bg-black text-white py-2 px-6 rounded-lg font-medium hover:bg-gray-800 transition-colors btn-glow"
                 >View on GitHub</a
               >
@@ -315,15 +319,20 @@
             class="bg-white rounded-xl overflow-hidden shadow-lg hover:-translate-y-2 transition-transform duration-300"
           >
             <div
-              class="bg-gray-200 h-48 flex items-center justify-center text-gray-400"
+              class="bg-gray-200 flex items-center justify-center text-gray-400 overflow-hidden"
+              style="height: auto; max-height: 250px"
             >
-              [Certificate Image]
+              <img
+                src="/assets/cs50x.png"
+                alt="Harvard CS50X certificate"
+                class="w-full object-contain p-2"
+              />
             </div>
             <div class="p-6">
               <h3 class="text-xl font-bold mb-2">
-                Python Developer Certification
+                Introduction to Computer Science
               </h3>
-              <p class="text-gray-500">Issued by Python Institute, 2023</p>
+              <p class="text-gray-500">Issued by Harvard University, 2024</p>
             </div>
           </div>
 
@@ -331,13 +340,18 @@
             class="bg-white rounded-xl overflow-hidden shadow-lg hover:-translate-y-2 transition-transform duration-300"
           >
             <div
-              class="bg-gray-200 h-48 flex items-center justify-center text-gray-400"
+              class="bg-gray-200 flex items-center justify-center text-gray-400 overflow-hidden"
+              style="height: auto; max-height: 250px"
             >
-              [Certificate Image]
+              <img
+                src="/assets/py.jpg"
+                alt="Python Certificate"
+                class="w-full object-contain p-2"
+              />
             </div>
             <div class="p-6">
-              <h3 class="text-xl font-bold mb-2">Web Development Bootcamp</h3>
-              <p class="text-gray-500">Completed with honors, 2022</p>
+              <h3 class="text-xl font-bold mb-2">Python (Basic)</h3>
+              <p class="text-gray-500">Passed exam by Hackerrank</p>
             </div>
           </div>
 
@@ -345,17 +359,34 @@
             class="bg-white rounded-xl overflow-hidden shadow-lg hover:-translate-y-2 transition-transform duration-300"
           >
             <div
-              class="bg-gray-200 h-48 flex items-center justify-center text-gray-400"
+              class="bg-gray-200 flex items-center justify-center text-gray-400 overflow-hidden"
+              style="height: auto; max-height: 250px"
             >
-              [Award Image]
+              <img
+                src="/assets/sql_basic.jpg"
+                alt="SQL Certificate"
+                class="w-full object-contain p-2"
+              />
             </div>
             <div class="p-6">
-              <h3 class="text-xl font-bold mb-2">Hackathon Winner</h3>
-              <p class="text-gray-500">
-                First place in Regional Code Challenge
-              </p>
+              <h3 class="text-xl font-bold mb-2">SQL (Basic)</h3>
+              <p class="text-gray-500">Certified by Hackerrank</p>
             </div>
           </div>
+        </div>
+
+        <!-- LinkedIn CTA Button -->
+        <div class="mt-12 text-center">
+          <p class="text-gray-700 mb-6">
+            View my complete list of certifications and achievements on LinkedIn
+          </p>
+          <a
+            href="https://linkedin.com/in/baibhab-adhikari"
+            target="_blank"
+            class="inline-flex items-center justify-center bg-[#0077b5] hover:bg-[#005885] text-white py-3 px-8 rounded-lg font-medium shadow-md transition transform hover:-translate-y-0.5 btn-glow"
+          >
+            <i class="fab fa-linkedin-in mr-2"></i>View My LinkedIn Profile
+          </a>
         </div>
       </div>
     </section>
@@ -363,7 +394,7 @@
     <section id="contact" class="py-20 bg-gray-50">
       <div class="container mx-auto px-6 max-w-xl">
         <h2 class="text-4xl font-bold text-center mb-16 relative">
-          Contact Me
+          Lets Get In Touch!
         </h2>
         <form class="space-y-6">
           <input
@@ -397,24 +428,50 @@
     </section>
 
     <footer class="py-12 bg-gray-900 text-gray-200">
-      <div class="container mx-auto px-6 text-center">
-        <div class="flex justify-center space-x-6 mb-6">
-          <a
-            href="https://github.com"
-            target="_blank"
-            class="social-icon-hover bg-gray-800 hover:bg-black w-12 h-12 rounded-full flex items-center justify-center transition-colors duration-300"
-          >
-            <i class="fab fa-github text-xl"></i>
-          </a>
-          <a
-            href="https://linkedin.com"
-            target="_blank"
-            class="social-icon-hover bg-gray-800 hover:bg-black w-12 h-12 rounded-full flex items-center justify-center transition-colors duration-300"
-          >
-            <i class="fab fa-linkedin-in text-xl"></i>
-          </a>
+      <div class="container mx-auto px-6">
+        <div class="flex flex-col md:flex-row md:justify-between items-center">
+          <!-- Left side - Copyright and resume download -->
+          <div class="flex flex-col items-center md:items-start mb-6 md:mb-0">
+            <p class="text-gray-400 mb-4">
+              &copy; 2025 Baibhab Adhikari. All rights reserved.
+            </p>
+            <a
+              href="/assets/Baibhab_Adhikari_Resume.pdf"
+              download
+              class="inline-flex items-center justify-center bg-gray-800 hover:bg-gray-700 text-white py-2 px-5 rounded-lg transition-colors duration-300"
+            >
+              <i class="fas fa-file-download mr-2"></i>Download Resume
+            </a>
+          </div>
+
+          <!-- Right side - Social links -->
+          <div class="flex space-x-4">
+            <a
+              href="https://github.com/Baibhab-Adhikari"
+              target="_blank"
+              class="social-icon-hover w-10 h-10 rounded-full flex items-center justify-center transition-colors duration-300"
+              aria-label="GitHub"
+            >
+              <i class="fab fa-github text-lg"></i>
+            </a>
+            <a
+              href="https://linkedin.com/in/baibhab-adhikari"
+              target="_blank"
+              class="social-icon-hover w-10 h-10 rounded-full flex items-center justify-center transition-colors duration-300"
+              aria-label="LinkedIn"
+            >
+              <i class="fab fa-linkedin-in text-lg"></i>
+            </a>
+            <a
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=jiniaadhikari.resto@gmail.com"
+              target="_blank"
+              class="social-icon-hover w-10 h-10 rounded-full flex items-center justify-center transition-colors duration-300"
+              aria-label="Email"
+            >
+              <i class="fas fa-envelope text-lg"></i>
+            </a>
+          </div>
         </div>
-        <p class="text-gray-500">&copy; 2025 Your Name. All rights reserved.</p>
       </div>
     </footer>
 
