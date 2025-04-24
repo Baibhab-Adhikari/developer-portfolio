@@ -18,25 +18,55 @@ window.addEventListener("scroll", () => {
   }
 });
 
-// Initialize Typed.js
-document.addEventListener("DOMContentLoaded", function () {
-  const options = {
+// DOM content loaded event
+document.addEventListener("DOMContentLoaded", function() {
+  // Initialize Typed.js
+  const typed = new Typed("#type-animation", {
     strings: [
-      "I am a Problem Solver",
-      "I am a  Python Developer",
-      "I enjoy Backend Development",
-      "I love making RESTful APIs",
-      "I am interested in ML/MLOPS",
+      "Machine Learning Enthusiast",
+      "Python Developer",
+      "Backend Developer",
+      "Problem Solver",
+      "Engineering Student"
     ],
     typeSpeed: 50,
-    backSpeed: 30,
-    backDelay: 2000,
-    loop: true,
-    showCursor: true,
-    cursorChar: "|",
-  };
+    backSpeed: 50,
+    backDelay: 1000,
+    startDelay: 500,
+    loop: true
+  });
 
-  const typed = new Typed("#type-animation", options);
+  // Initialize Leaflet map for Barasat, Kolkata, India
+  if (document.getElementById('map')) {
+    // Create map with Barasat, Kolkata coordinates (88.4811, 22.7226)
+    const map = L.map('map').setView([22.7226, 88.4811], 13);
+    
+    // Add OpenStreetMap tiles (completely free, no API key needed)
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+    
+    // Add marker for the location
+    const marker = L.marker([22.7226, 88.4811])
+      .addTo(map)
+      .bindPopup('Barasat, Kolkata')
+      .openPopup();
+    
+    // Add animation effect when map loads
+    setTimeout(() => {
+      document.getElementById('map').classList.add('animate-in');
+    }, 300);
+  }
+  
+  // Navbar background change on scroll
+  const navbarScroll = document.querySelector('.navbar');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+      navbarScroll.classList.add('bg-white', 'shadow-md');
+    } else {
+      navbarScroll.classList.remove('bg-white', 'shadow-md');
+    }
+  });
 });
 
 // Add animation classes to elements when they enter the viewport
@@ -67,63 +97,25 @@ document.addEventListener("DOMContentLoaded", () => {
         "transition-all",
         "duration-700"
       );
+      // Start observing the element
+      observer.observe(el);
     });
 
   // Add a custom class for animation
   document.head.insertAdjacentHTML(
     "beforeend",
     `
-        <style>
-            .animate-in {
-                opacity: 1 !important;
-                transform: translateY(0) !important;
-            }
-            .navbar.scrolled {
-                background: rgba(255, 255, 255, 0.7);
-                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-                backdrop-filter: blur(10px);
-                -webkit-backdrop-filter: blur(10px);
-            }
-        </style>
+    <style>
+        .animate-in {
+            opacity: 1 !important;
+            transform: translateY(0) !important;
+        }
+        .navbar.scrolled {
+            backdrop-filter: blur(10px);
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+    </style>
     `
   );
-
-  // Start observing elements
-  setTimeout(() => {
-    document
-      .querySelectorAll(
-        ".tech-item, #about p, section h2, .bg-white.rounded-xl"
-      )
-      .forEach((el) => {
-        observer.observe(el);
-      });
-
-    // Animate hero elements immediately
-    document
-      .querySelectorAll("#hero h1, #hero p, #hero .image-placeholder, #hero a")
-      .forEach((el) => {
-        el.classList.add("animate-in");
-      });
-  }, 100);
-
-  // Handle form submission
-  const contactForm = document.querySelector("#contact form");
-  if (contactForm) {
-    contactForm.addEventListener("submit", function (e) {
-      e.preventDefault();
-
-      const nameField = this.querySelector('input[name="name"]');
-      const emailField = this.querySelector('input[name="email"]');
-      const messageField = this.querySelector('textarea[name="message"]');
-
-      // Simple validation
-      if (nameField.value && emailField.value && messageField.value) {
-        // Normally, you would send this data to a server
-        alert("Thank you for your message! I will get back to you soon.");
-        this.reset();
-      } else {
-        alert("Please fill in all fields.");
-      }
-    });
-  }
 });
