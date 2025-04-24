@@ -1,0 +1,184 @@
+/* Custom styles that complement Tailwind CSS */
+
+/* Navbar glassmorphism effect */
+.navbar {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    background: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+}
+
+.navbar.scrolled {
+    background: rgba(255, 255, 255, 0.75);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Gradient text effect */
+.gradient-text {
+    background: linear-gradient(90deg, #9333ea, #ec4899);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Typing Animation Gradient */
+.typing-gradient {
+    background: linear-gradient(90deg, #3b82f6, #06b6d4);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 600;
+}
+
+/* Background animation in hero */
+.background-animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 50% 50%, rgba(147, 51, 234, 0.1), transparent 60%);
+    z-index: 0;
+    animation: pulse 8s infinite alternate;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 0.2;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 0.4;
+    }
+}
+
+/* Custom styles for section headings */
+h2::after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #9333ea, #ec4899);
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+/* Tech item hover effect with zoom */
+.tech-item {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.tech-item img, 
+.tech-item svg {
+    transition: transform 0.3s ease;
+}
+
+.tech-item:hover {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1), 0 6px 10px rgba(0, 0, 0, 0.05);
+    transform: translateY(-5px);
+}
+
+.tech-item:hover img,
+.tech-item:hover svg {
+    transform: scale(1.15);
+}
+
+/* Add a subtle pulse glow effect on hover */
+@keyframes glow {
+    0%, 100% {
+        box-shadow: 0 0 5px rgba(147, 51, 234, 0.2);
+    }
+    50% {
+        box-shadow: 0 0 15px rgba(147, 51, 234, 0.4);
+    }
+}
+
+.tech-item:hover {
+    animation: glow 3s infinite;
+}
+
+/* Button glow effects */
+.btn-glow {
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.btn-glow:hover {
+    animation: glow 2s infinite;
+}
+
+/* Subtle shadow effect for GitHub and Contact buttons */
+@keyframes button-glow {
+    0%, 100% {
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.7);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+    }
+}
+
+/* Social media icon hover effect with typing gradient */
+.social-icon-hover {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.social-icon-hover i {
+    transition: all 0.3s ease;
+}
+
+.social-icon-hover:hover {
+    background: transparent !important;
+}
+
+.social-icon-hover:hover i {
+    background: linear-gradient(90deg, #3b82f6, #06b6d4);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transform: scale(1.25);
+}
+
+/* Project card image styling */
+.bg-white.rounded-xl .bg-gray-200 {
+    overflow: hidden;
+}
+
+.bg-white.rounded-xl .bg-gray-200 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.bg-white.rounded-xl:hover .bg-gray-200 img {
+    transform: scale(1.05);
+}
+
+/* Project card layout with fixed button at bottom */
+.project-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    text-align: center;
+}
+
+.project-card .card-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card .card-footer {
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
