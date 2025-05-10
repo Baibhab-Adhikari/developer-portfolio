@@ -18,36 +18,102 @@ window.addEventListener("scroll", () => {
   }
 });
 
+// Theme toggle functionality
+const htmlElement = document.documentElement;
+const themeToggleButtons = document.querySelectorAll(".theme-toggle-btn"); // Use a common class
+
+// Function to update icons on all toggle buttons
+function updateThemeIcons(isDarkMode) {
+  themeToggleButtons.forEach((button) => {
+    const icon = button.querySelector("i");
+    if (icon) {
+      if (isDarkMode) {
+        icon.classList.remove("fa-moon");
+        icon.classList.add("fa-sun");
+      } else {
+        icon.classList.remove("fa-sun");
+        icon.classList.add("fa-moon");
+      }
+    }
+  });
+}
+
+// Function to set the theme
+function setTheme(theme) {
+  if (theme === "dark") {
+    htmlElement.classList.add("dark");
+    updateThemeIcons(true);
+    localStorage.setItem("theme", "dark");
+  } else {
+    htmlElement.classList.remove("dark");
+    updateThemeIcons(false);
+    localStorage.setItem("theme", "light");
+  }
+}
+
+// Check for saved theme preference or use system preference
+const savedTheme = localStorage.getItem("theme");
+const prefersDark =
+  window.matchMedia &&
+  window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+if (savedTheme) {
+  setTheme(savedTheme);
+} else if (prefersDark) {
+  setTheme("dark");
+} else {
+  setTheme("light"); // Default to light if no preference
+}
+
+// Add event listeners to all theme toggle buttons
+themeToggleButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    if (htmlElement.classList.contains("dark")) {
+      setTheme("light");
+    } else {
+      setTheme("dark");
+    }
+  });
+});
+
 // DOM content loaded event
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
+  // Initialize AOS
+  AOS.init({
+    duration: 800, // values from 0 to 3000, with step 50ms
+    easing: "ease-in-out", // default easing for AOS animations
+    once: false, // whether animation should happen only once - while scrolling down
+    mirror: true, // whether elements should animate out while scrolling past them
+  });
+
   // Mobile menu toggle functionality
-  const mobileMenuButton = document.getElementById('mobile-menu-button');
-  const mobileMenu = document.getElementById('mobile-menu');
-  const hamburgerIcon = document.querySelector('.menu-icon');
+  const mobileMenuButton = document.getElementById("mobile-menu-button");
+  const mobileMenu = document.getElementById("mobile-menu");
+  const hamburgerIcon = document.querySelector(".menu-icon");
 
   if (mobileMenuButton && mobileMenu) {
-    mobileMenuButton.addEventListener('click', function() {
-      mobileMenu.classList.toggle('hidden');
-      mobileMenu.classList.toggle('active');
-      document.body.classList.toggle('mobile-menu-open');
-      
+    mobileMenuButton.addEventListener("click", function () {
+      mobileMenu.classList.toggle("hidden");
+      mobileMenu.classList.toggle("active");
+      document.body.classList.toggle("mobile-menu-open");
+
       // Toggle hamburger icon animation
       if (hamburgerIcon) {
-        hamburgerIcon.classList.toggle('active');
+        hamburgerIcon.classList.toggle("active");
       }
     });
-    
+
     // Close mobile menu when clicking on a link
-    const mobileMenuLinks = mobileMenu.querySelectorAll('a');
-    mobileMenuLinks.forEach(link => {
-      link.addEventListener('click', function() {
-        mobileMenu.classList.add('hidden');
-        mobileMenu.classList.remove('active');
-        document.body.classList.remove('mobile-menu-open');
-        
+    const mobileMenuLinks = mobileMenu.querySelectorAll("a");
+    mobileMenuLinks.forEach((link) => {
+      link.addEventListener("click", function () {
+        mobileMenu.classList.add("hidden");
+        mobileMenu.classList.remove("active");
+        document.body.classList.remove("mobile-menu-open");
+
         // Reset hamburger icon
         if (hamburgerIcon) {
-          hamburgerIcon.classList.remove('active');
+          hamburgerIcon.classList.remove("active");
         }
       });
     });
@@ -60,95 +126,35 @@ document.addEventListener("DOMContentLoaded", function() {
       "Python Developer",
       "Backend Developer",
       "Problem Solver",
-      "Engineering Student"
+      "Engineering Student",
     ],
     typeSpeed: 50,
     backSpeed: 50,
     backDelay: 1000,
     startDelay: 500,
-    loop: true
+    loop: true,
   });
 
   // Initialize Leaflet map for Barasat, Kolkata, India
-  if (document.getElementById('map')) {
+  if (document.getElementById("map")) {
     // Create map with Barasat, Kolkata coordinates (88.4811, 22.7226)
-    const map = L.map('map').setView([22.7226, 88.4811], 13);
-    
+    const map = L.map("map").setView([22.7226, 88.4811], 13);
+
     // Add OpenStreetMap tiles (completely free, no API key needed)
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+      attribution:
+        '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
     }).addTo(map);
-    
+
     // Add marker for the location
     const marker = L.marker([22.7226, 88.4811])
       .addTo(map)
-      .bindPopup('Barasat, Kolkata')
+      .bindPopup("Barasat, Kolkata")
       .openPopup();
-    
+
     // Add animation effect when map loads
     setTimeout(() => {
-      document.getElementById('map').classList.add('animate-in');
+      document.getElementById("map").classList.add("animate-in");
     }, 300);
   }
-  
-  // Navbar background change on scroll
-  const navbarScroll = document.querySelector('.navbar');
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-      navbarScroll.classList.add('bg-white', 'shadow-md');
-    } else {
-      navbarScroll.classList.remove('bg-white', 'shadow-md');
-    }
-  });
-});
-
-// Add animation classes to elements when they enter the viewport
-const observerOptions = {
-  root: null,
-  rootMargin: "0px",
-  threshold: 0.1,
-};
-
-const observer = new IntersectionObserver((entries, observer) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("animate-in");
-      observer.unobserve(entry.target);
-    }
-  });
-}, observerOptions);
-
-// Observe elements that should animate on scroll
-document.addEventListener("DOMContentLoaded", () => {
-  // Add a base class for pre-animation state
-  document
-    .querySelectorAll(".tech-item, #about p, section h2, .bg-white.rounded-xl")
-    .forEach((el) => {
-      el.classList.add(
-        "opacity-0",
-        "translate-y-4",
-        "transition-all",
-        "duration-700"
-      );
-      // Start observing the element
-      observer.observe(el);
-    });
-
-  // Add a custom class for animation
-  document.head.insertAdjacentHTML(
-    "beforeend",
-    `
-    <style>
-        .animate-in {
-            opacity: 1 !important;
-            transform: translateY(0) !important;
-        }
-        .navbar.scrolled {
-            backdrop-filter: blur(10px);
-            background-color: rgba(255, 255, 255, 0.9);
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-        }
-    </style>
-    `
-  );
 });
