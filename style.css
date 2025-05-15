@@ -294,6 +294,59 @@ html.dark .typing-gradient {
   background-image: -o-linear-gradient(90deg, #0070f3, #06b6d4);
 }
 
+/* Profile image hover effect */
+.profile-image-container {
+  position: relative;
+  display: inline-block; /* Or block, depending on layout */
+  border-radius: 50%;
+  padding: 5px; /* Adjust padding to control the border thickness */
+  transition: all 0.3s ease-in-out;
+}
+
+.profile-image-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 50%;
+  padding: 3px; /* Thickness of the gradient border */
+  background: linear-gradient(45deg, #9333ea, #ec4899); /* Default light mode gradient */
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+  opacity: 0; /* Initially hidden */
+}
+
+html.dark .profile-image-container::before {
+  background: linear-gradient(45deg, #0070f3, #eaeaea); /* Vercel-like dark mode gradient */
+}
+
+@keyframes pulse-gradient-border {
+  0%,
+  100% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.profile-image-container:hover::before {
+  animation: pulse-gradient-border 1.5s infinite ease-in-out;
+}
+
+.profile-image-container img {
+  display: block;
+  border-radius: 50%;
+  transition: transform 0.3s ease-in-out; /* Keep for other potential transforms */
+}
+
+.profile-image-container:hover img {
+}
+
 /* Background animation in hero */
 .background-animation {
   position: absolute;
@@ -434,12 +487,14 @@ html.dark h2::after {
 }
 
 .tech-item:hover {
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1), 0 6px 10px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1), 0 6px 10px rgba(0, 0, 0, 0.05); /* Base shadow */
   transform: translateY(-5px);
   -webkit-transform: translateY(-5px);
   -moz-transform: translateY(-5px);
   -ms-transform: translateY(-5px);
   -o-transform: translateY(-5px);
+  animation-iteration-count: infinite;
+  animation-duration: 3s;
 }
 
 .tech-item:hover img,
@@ -472,11 +527,15 @@ html.dark h2::after {
   }
 }
 
-.tech-item:hover {
-  animation: glow 3s infinite;
-  -webkit-animation: glow 3s infinite;
-  -moz-animation: glow 3s infinite;
-  -o-animation: glow 3s infinite;
+/* Blue glow animation for dark mode */
+@keyframes blue-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 7px rgba(0, 112, 243, 0.4), 0 0 10px rgba(0, 112, 243, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 15px rgba(0, 112, 243, 0.6), 0 0 25px rgba(0, 112, 243, 0.5);
+  }
 }
 
 /* Button glow effects */
@@ -489,10 +548,19 @@ html.dark h2::after {
 }
 
 .btn-glow:hover {
-  animation: glow 2s infinite;
-  -webkit-animation: glow 2s infinite;
-  -moz-animation: glow 2s infinite;
-  -o-animation: glow 2s infinite;
+  animation-iteration-count: infinite;
+  animation-duration: 2s;
+}
+
+/* Theme-specific animations for tech-item and btn-glow */
+html:not(.dark) .tech-item:hover,
+html:not(.dark) .btn-glow:hover {
+  animation-name: glow;
+}
+
+html.dark .tech-item:hover,
+html.dark .btn-glow:hover {
+  animation-name: blue-glow;
 }
 
 /* Subtle shadow effect for GitHub and Contact buttons */
