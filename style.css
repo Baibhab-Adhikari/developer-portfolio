@@ -312,7 +312,11 @@ html.dark .typing-gradient {
   bottom: 0;
   border-radius: 50%;
   padding: 3px; /* Thickness of the gradient border */
-  background: linear-gradient(45deg, #9333ea, #ec4899); /* Default light mode gradient */
+  background: linear-gradient(
+    45deg,
+    #9333ea,
+    #ec4899
+  ); /* Default light mode gradient */
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: destination-out;
@@ -321,7 +325,11 @@ html.dark .typing-gradient {
 }
 
 html.dark .profile-image-container::before {
-  background: linear-gradient(45deg, #0070f3, #eaeaea); /* Vercel-like dark mode gradient */
+  background: linear-gradient(
+    45deg,
+    #0070f3,
+    #eaeaea
+  ); /* Vercel-like dark mode gradient */
 }
 
 @keyframes pulse-gradient-border {
@@ -342,9 +350,6 @@ html.dark .profile-image-container::before {
   display: block;
   border-radius: 50%;
   transition: transform 0.3s ease-in-out; /* Keep for other potential transforms */
-}
-
-.profile-image-container:hover img {
 }
 
 /* Background animation in hero */
