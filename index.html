@@ -1,836 +1,585 @@
 <!DOCTYPE html>
 <html lang="en" class="">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Baibhab Adhikari's Portfolio" />
-    <meta
-      name="keywords"
-      content="Baibhab Adhikari, Portfolio, Web Developer, Engineering Student, Machine Learning Enthusiast, Backend Developer, RESTful APIs"
-    />
-    <meta name="author" content="Baibhab Adhikari" />
-    <title>Baibhab Adhikari | Portfolio</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            colors: {
-              "brand-primary": "#0070F3",
-              "brand-purple": "#9333ea",
 
-              "bg-default": "#FFFFFF",
-              "bg-card": "#F9FAFB",
-              "text-default": "#1F2937",
-              "text-muted": "#6B7280",
-              "border-default": "#E5E7EB",
-              "accent-default": "#F3F4F6",
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Baibhab Adhikari's Portfolio" />
+  <meta name="keywords"
+    content="Baibhab Adhikari, Portfolio, Web Developer, Engineering Student, Machine Learning Enthusiast, Backend Developer, RESTful APIs" />
+  <meta name="author" content="Baibhab Adhikari" />
+  <title>Baibhab Adhikari | Portfolio</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "brand-primary": "#0070F3",
+            "brand-purple": "#9333ea",
 
-              "dark-bg-default": "#000000",
-              "dark-bg-card": "#111111",
-              "dark-text-default": "#EAEAEA",
-              "dark-text-muted": "#999999",
-              "dark-border-default": "#333333",
-              "dark-accent-default": "#1F1F1F",
-            },
+            "bg-default": "#FFFFFF",
+            "bg-card": "#F9FAFB",
+            "text-default": "#1F2937",
+            "text-muted": "#6B7280",
+            "border-default": "#E5E7EB",
+            "accent-default": "#F3F4F6",
+
+            "dark-bg-default": "#000000",
+            "dark-bg-card": "#111111",
+            "dark-text-default": "#EAEAEA",
+            "dark-text-muted": "#999999",
+            "dark-border-default": "#333333",
+            "dark-accent-default": "#1F1F1F",
           },
         },
-      };
-    </script>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="icon" href="./assets/code.png" type="image/png" />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
-    />
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-      crossorigin=""
-    />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <script
-      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-      crossorigin=""
-    ></script>
-  </head>
+      },
+    };
+  </script>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="./assets/code.png" type="image/png" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+</head>
 
-  <body
-    class="bg-bg-default text-text-default dark:bg-dark-bg-default dark:text-dark-text-default font-sans"
-  >
-    <header class="navbar fixed top-0 w-full z-50">
-      <nav class="container mx-auto py-4 px-6">
-        <div class="flex justify-between items-center">
-          <!-- Logo (Left) -->
-          <div class="text-2xl font-bold gradient-text">Baibhab Adhikari</div>
+<body class="bg-bg-default text-text-default dark:bg-dark-bg-default dark:text-dark-text-default font-sans">
+  <header class="navbar fixed top-0 w-full z-50">
+    <nav class="container mx-auto py-4 px-6">
+      <div class="flex justify-between items-center">
+        <!-- Logo (Left) -->
+        <div class="text-2xl font-bold gradient-text">Baibhab Adhikari</div>
 
-          <!-- Navigation Links and Buttons (Right) -->
+        <!-- Navigation Links and Buttons (Right) -->
+        <div class="flex items-center">
+          <!-- Desktop Navigation Links -->
+          <div class="hidden md:flex flex-wrap items-center space-x-4 md:space-x-8 mr-4" id="desktop-menu-items">
+            <a href="#about"
+              class="text-text-muted dark:text-dark-text-muted hover:text-brand-purple dark:hover:text-brand-purple font-medium transition-colors px-2 py-1">About
+              Me</a>
+            <a href="#tech-stack"
+              class="text-text-muted dark:text-dark-text-muted hover:text-brand-purple dark:hover:text-brand-purple font-medium transition-colors px-2 py-1">Tech
+              Stack</a>
+            <a href="#projects"
+              class="text-text-muted dark:text-dark-text-muted hover:text-brand-purple dark:hover:text-brand-purple font-medium transition-colors px-2 py-1">My
+              Projects</a>
+            <a href="#achievements"
+              class="text-text-muted dark:text-dark-text-muted hover:text-brand-purple dark:hover:text-brand-purple font-medium transition-colors px-2 py-1">Certifications</a>
+            <a href="#contact"
+              class="text-text-muted dark:text-dark-text-muted hover:text-brand-purple dark:hover:text-brand-purple font-medium transition-colors px-2 py-1">Contact
+              Me</a>
+          </div>
+
+          <!-- Theme Toggle (Desktop) and Mobile Menu Button -->
           <div class="flex items-center">
-            <!-- Desktop Navigation Links -->
-            <div
-              class="hidden md:flex flex-wrap items-center space-x-4 md:space-x-8 mr-4"
-              id="desktop-menu-items"
-            >
-              <a
-                href="#about"
-                class="text-text-muted dark:text-dark-text-muted hover:text-brand-purple dark:hover:text-brand-purple font-medium transition-colors px-2 py-1"
-                >About Me</a
-              >
-              <a
-                href="#tech-stack"
-                class="text-text-muted dark:text-dark-text-muted hover:text-brand-purple dark:hover:text-brand-purple font-medium transition-colors px-2 py-1"
-                >Tech Stack</a
-              >
-              <a
-                href="#projects"
-                class="text-text-muted dark:text-dark-text-muted hover:text-brand-purple dark:hover:text-brand-purple font-medium transition-colors px-2 py-1"
-                >My Projects</a
-              >
-              <a
-                href="#achievements"
-                class="text-text-muted dark:text-dark-text-muted hover:text-brand-purple dark:hover:text-brand-purple font-medium transition-colors px-2 py-1"
-                >Certifications</a
-              >
-              <a
-                href="#contact"
-                class="text-text-muted dark:text-dark-text-muted hover:text-brand-purple dark:hover:text-brand-purple font-medium transition-colors px-2 py-1"
-                >Contact Me</a
-              >
-            </div>
-
-            <!-- Theme Toggle (Desktop) and Mobile Menu Button -->
-            <div class="flex items-center">
-              <button
-                id="theme-toggle-desktop"
-                type="button"
-                class="theme-toggle-btn hidden md:flex items-center text-text-muted dark:text-dark-text-muted hover:text-brand-purple dark:hover:text-brand-purple focus:outline-none rounded-lg text-lg p-2.5"
-              >
-                <i class="fas fa-moon"></i>
+            <button id="theme-toggle-desktop" type="button"
+              class="theme-toggle-btn hidden md:flex items-center text-text-muted dark:text-dark-text-muted hover:text-brand-purple dark:hover:text-brand-purple focus:outline-none rounded-lg text-lg p-2.5">
+              <i class="fas fa-moon"></i>
+            </button>
+            <div class="block md:hidden ml-2">
+              <button id="mobile-menu-button"
+                class="text-text-default dark:text-dark-text-default hover:text-brand-purple dark:hover:text-brand-purple focus:outline-none relative z-50">
+                <div class="hamburger-icon">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
               </button>
-              <div class="block md:hidden ml-2">
-                <button
-                  id="mobile-menu-button"
-                  class="text-text-default dark:text-dark-text-default hover:text-brand-purple dark:hover:text-brand-purple focus:outline-none relative z-50"
-                >
-                  <div class="hamburger-icon">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                  </div>
-                </button>
-              </div>
             </div>
           </div>
         </div>
-        <div id="mobile-menu" class="md:hidden hidden mt-4">
-          <ul class="flex flex-col space-y-2">
-            <li>
-              <a
-                href="#about"
-                class="block text-text-muted dark:text-dark-text-muted hover:text-brand-purple dark:hover:text-brand-purple font-medium transition-colors px-2 py-1"
-                >About Me</a
-              >
-            </li>
-            <li>
-              <a
-                href="#tech-stack"
-                class="block text-text-muted dark:text-dark-text-muted hover:text-brand-purple dark:hover:text-brand-purple font-medium transition-colors px-2 py-1"
-                >Tech Stack</a
-              >
-            </li>
-            <li>
-              <a
-                href="#projects"
-                class="block text-text-muted dark:text-dark-text-muted hover:text-brand-purple dark:hover:text-brand-purple font-medium transition-colors px-2 py-1"
-                >My Projects</a
-              >
-            </li>
-            <li>
-              <a
-                href="#certifications-and-publications"
-                class="block text-text-muted dark:text-dark-text-muted hover:text-brand-purple dark:hover:text-brand-purple font-medium transition-colors px-2 py-1"
-                >Certifications</a
-              >
-            </li>
-            <li>
-              <a
-                href="#contact"
-                class="block text-text-muted dark:text-dark-text-muted hover:text-brand-purple dark:hover:text-brand-purple font-medium transition-colors px-2 py-1"
-                >Contact Me</a
-              >
-            </li>
-            <li>
-              <button
-                id="theme-toggle-mobile"
-                type="button"
-                class="theme-toggle-btn w-full flex justify-between items-center text-text-muted dark:text-dark-text-muted hover:text-brand-purple dark:hover:text-brand-purple font-medium transition-colors px-2 py-2 rounded-lg"
-              >
-                <span>Theme</span>
-                <i class="fas fa-moon"></i>
-              </button>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </header>
-
-    <section
-      id="hero"
-      class="min-h-screen flex items-center relative overflow-hidden"
-    >
-      <div class="background-animation"></div>
-      <div
-        class="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between"
-      >
-        <div class="md:w-1/2 text-left">
-          <h1
-            class="text-5xl md:text-6xl font-bold mb-6 text-text-default dark:text-dark-text-default"
-          >
-            Hi I'm
-          </h1>
-          <h1 class="gradient-text text-5xl md:text-6xl font-bold mb-6">
-            Baibhab Adhikari
-          </h1>
-          <p class="text-xl mb-2">
-            <span class="typing-gradient" id="type-animation"></span>
-          </p>
-          <p class="text-text-muted dark:text-dark-text-muted mb-8"></p>
-          <div class="flex flex-wrap gap-4">
-            <a
-              href="#contact"
-              class="bg-brand-primary hover:opacity-90 text-white py-3 px-8 rounded-lg font-medium shadow-md transition transform hover:-translate-y-0.5 btn-glow"
-              >Get in Touch</a
-            >
-            <a
-              href="./assets/Baibhab_Adhikari_Resume.pdf"
-              download
-              class="inline-flex items-center justify-center bg-bg-card dark:bg-dark-bg-card border-2 border-border-default dark:border-dark-border-default hover:bg-accent-default dark:hover:bg-dark-accent-default text-text-default dark:text-dark-text-default py-3 px-6 rounded-lg font-medium shadow-md transition transform hover:-translate-y-0.5 btn-glow"
-              ><i class="fas fa-file-download mr-2"></i>Download Resume</a
-            >
-            <a
-              href="https://www.fiverr.com/s/1qeRqN0"
-              target="_blank"
-              class="inline-flex items-center justify-center bg-[#1DBF73] hover:bg-[#18a364] text-white py-3 px-6 rounded-lg font-medium shadow-md transition transform hover:-translate-y-0.5 btn-glow"
-              ><i class="fas fa-code mr-2"></i>Freelancing services on Fiverr</a
-            >
-          </div>
-        </div>
-        <div class="md:w-1/3 flex justify-center items-center md:mt-0 mt-12">
-          <div class="profile-image-container">
-            <img
-              src="assets/img1.jpeg"
-              alt="Baibhab Adhikari"
-              class="rounded-full w-80 h-80 object-cover border-4 border-bg-card dark:border-dark-bg-card shadow-lg"
-            />
-          </div>
-        </div>
       </div>
-    </section>
-
-    <section id="about" class="py-20 bg-bg-card dark:bg-dark-bg-card">
-      <div class="container mx-auto px-6 max-w-3xl">
-        <h2
-          data-aos="fade-up"
-          class="text-4xl font-bold text-center mb-16 relative text-text-default dark:text-dark-text-default"
-        >
-          About Me
-        </h2>
-        <p
-          data-aos="fade-up"
-          class="text-text-muted dark:text-dark-text-muted text-center mb-4"
-        >
-          I am an engineering student passionate about machine learning and AI
-          with a strong foundation in Python development. My goal is to become a
-          skilled ML engineer who can build intelligent systems that solve
-          real-world problems.
-        </p>
-        <p
-          data-aos="fade-up"
-          class="text-text-muted dark:text-dark-text-muted text-center mb-4"
-        >
-          Currently, I'm expanding my skill set by diving deep into backend
-          technologies and deployment strategies to create end-to-end ML
-          solutions that are both powerful and production-ready.
-        </p>
-        <p
-          data-aos="fade-up"
-          class="text-text-muted dark:text-dark-text-muted text-center"
-        >
-          My journey combines engineering fundamentals with continuous learning
-          in data science, helping me bridge the gap between theoretical models
-          and practical applications.
-        </p>
-      </div>
-    </section>
-
-    <section
-      id="tech-stack"
-      class="py-20 bg-bg-default dark:bg-dark-bg-default"
-    >
-      <div class="container mx-auto px-6">
-        <h2
-          data-aos="fade-up"
-          class="text-4xl font-bold text-center mb-16 relative text-text-default dark:text-dark-text-default"
-        >
-          My Tech Stack
-        </h2>
-        <ul class="flex flex-wrap justify-center gap-6 md:gap-8">
-          <li
-            data-aos="fade-up"
-            class="tech-item bg-white p-6 rounded-xl shadow-md flex flex-col items-center hover:-translate-y-1 transition-transform border border-gray-200 dark:border-gray-700"
-          >
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original-wordmark.svg"
-              alt="Python"
-              class="w-16 h-16"
-            />
+      <div id="mobile-menu" class="md:hidden hidden mt-4">
+        <ul class="flex flex-col space-y-2">
+          <li>
+            <a href="#about"
+              class="block text-text-muted dark:text-dark-text-muted hover:text-brand-purple dark:hover:text-brand-purple font-medium transition-colors px-2 py-1">About
+              Me</a>
           </li>
-          <li
-            data-aos="fade-up"
-            class="tech-item bg-white p-6 rounded-xl shadow-md flex flex-col items-center hover:-translate-y-1 transition-transform border border-gray-200 dark:border-gray-700"
-          >
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg"
-              alt="C Programming Language"
-              class="w-16 h-16"
-            />
+          <li>
+            <a href="#tech-stack"
+              class="block text-text-muted dark:text-dark-text-muted hover:text-brand-purple dark:hover:text-brand-purple font-medium transition-colors px-2 py-1">Tech
+              Stack</a>
           </li>
-          <li
-            data-aos="fade-up"
-            class="tech-item bg-white p-6 rounded-xl shadow-md flex flex-col items-center hover:-translate-y-1 transition-transform border border-gray-200 dark:border-gray-700"
-          >
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original-wordmark.svg"
-              alt="Numpy"
-              class="w-16 h-16"
-            />
+          <li>
+            <a href="#projects"
+              class="block text-text-muted dark:text-dark-text-muted hover:text-brand-purple dark:hover:text-brand-purple font-medium transition-colors px-2 py-1">My
+              Projects</a>
           </li>
-          <li
-            data-aos="fade-up"
-            class="tech-item bg-white p-6 rounded-xl shadow-md flex flex-col items-center hover:-translate-y-1 transition-transform border border-gray-200 dark:border-gray-700"
-          >
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original-wordmark.svg"
-              alt="Flask"
-              class="w-16 h-16"
-            />
+          <li>
+            <a href="#certifications-and-publications"
+              class="block text-text-muted dark:text-dark-text-muted hover:text-brand-purple dark:hover:text-brand-purple font-medium transition-colors px-2 py-1">Certifications</a>
           </li>
-          <li
-            data-aos="fade-up"
-            class="tech-item bg-white p-6 rounded-xl shadow-md flex flex-col items-center hover:-translate-y-1 transition-transform border border-gray-200 dark:border-gray-700"
-          >
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg"
-              alt="MySQL"
-              class="w-16 h-16"
-            />
+          <li>
+            <a href="#contact"
+              class="block text-text-muted dark:text-dark-text-muted hover:text-brand-purple dark:hover:text-brand-purple font-medium transition-colors px-2 py-1">Contact
+              Me</a>
           </li>
-          <li
-            data-aos="fade-up"
-            class="tech-item bg-white p-6 rounded-xl shadow-md flex flex-col items-center hover:-translate-y-1 transition-transform border border-gray-200 dark:border-gray-700"
-          >
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original-wordmark.svg"
-              alt="PostgreSQL"
-              class="w-16 h-16"
-            />
-          </li>
-          <li
-            data-aos="fade-up"
-            class="tech-item bg-white p-6 rounded-xl shadow-md flex flex-col items-center hover:-translate-y-1 transition-transform border border-gray-200 dark:border-gray-700"
-          >
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original-wordmark.svg"
-              alt="HTML"
-              class="w-16 h-16"
-            />
-          </li>
-          <li
-            data-aos="fade-up"
-            class="tech-item bg-white p-6 rounded-xl shadow-md flex flex-col items-center hover:-translate-y-1 transition-transform border border-gray-200 dark:border-gray-700"
-          >
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original-wordmark.svg"
-              alt="CSS"
-              class="w-16 h-16"
-            />
-          </li>
-          <li
-            data-aos="fade-up"
-            class="tech-item bg-white p-6 rounded-xl shadow-md flex flex-col items-center hover:-translate-y-1 transition-transform border border-gray-200 dark:border-gray-700"
-          >
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/heroku/heroku-original-wordmark.svg"
-              alt="Heroku"
-              class="w-16 h-16"
-            />
-          </li>
-          <li
-            data-aos="fade-up"
-            class="tech-item bg-white p-6 rounded-xl shadow-md flex flex-col items-center hover:-translate-y-1 transition-transform border border-gray-200 dark:border-gray-700"
-          >
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original-wordmark.svg"
-              alt="GIT"
-              class="w-16 h-16"
-            />
+          <li>
+            <button id="theme-toggle-mobile" type="button"
+              class="theme-toggle-btn w-full flex justify-between items-center text-text-muted dark:text-dark-text-muted hover:text-brand-purple dark:hover:text-brand-purple font-medium transition-colors px-2 py-2 rounded-lg">
+              <span>Theme</span>
+              <i class="fas fa-moon"></i>
+            </button>
           </li>
         </ul>
       </div>
-    </section>
+    </nav>
+  </header>
 
-    <section id="exploring" class="py-20 bg-bg-card dark:bg-dark-bg-card">
-      <div class="container mx-auto px-6">
-        <h2
-          data-aos="fade-up"
-          class="text-4xl font-bold text-center mb-16 relative text-text-default dark:text-dark-text-default"
-        >
-          Currently Exploring
-        </h2>
-        <p
-          data-aos="fade-up"
-          class="text-text-muted dark:text-dark-text-muted text-center mb-10"
-        >
-          I'm currently enhancing my skills in these areas to build more robust
-          and scalable applications:
+  <section id="hero" class="min-h-screen flex items-center relative overflow-hidden">
+    <div class="background-animation"></div>
+    <div class="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between">
+      <div class="md:w-1/2 text-left">
+        <h1 class="text-5xl md:text-6xl font-bold mb-6 text-text-default dark:text-dark-text-default">
+          Hi I'm
+        </h1>
+        <h1 class="gradient-text text-5xl md:text-6xl font-bold mb-6">
+          Baibhab Adhikari
+        </h1>
+        <p class="text-xl mb-2">
+          <span class="typing-gradient" id="type-animation"></span>
         </p>
-        <ul class="flex flex-wrap justify-center gap-6 md:gap-8">
-          <li
-            data-aos="fade-up"
-            class="tech-item bg-white p-6 rounded-xl shadow-md flex flex-col items-center hover:-translate-y-1 transition-transform border border-gray-200 dark:border-gray-700"
-          >
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original-wordmark.svg"
-              alt="Docker"
-              class="w-16 h-16"
-            />
-          </li>
-          <li
-            data-aos="fade-up"
-            class="tech-item bg-white p-6 rounded-xl shadow-md flex flex-col items-center hover:-translate-y-1 transition-transform border border-gray-200 dark:border-gray-700"
-          >
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original-wordmark.svg"
-              alt="Postman"
-              class="w-16 h-16"
-            />
-          </li>
-          <li
-            data-aos="fade-up"
-            class="tech-item bg-white p-6 rounded-xl shadow-md flex flex-col items-center hover:-translate-y-1 transition-transform border border-gray-200 dark:border-gray-700"
-          >
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original-wordmark.svg"
-              alt="MongoDB"
-              class="w-16 h-16"
-            />
-          </li>
-
-          <li
-            data-aos="fade-up"
-            class="tech-item bg-white p-6 rounded-xl shadow-md flex flex-col items-center hover:-translate-y-1 transition-transform border border-gray-200 dark:border-gray-700"
-          >
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original-wordmark.svg"
-              alt="Pandas"
-              class="w-16 h-16"
-            />
-          </li>
-          <li
-            data-aos="fade-up"
-            class="tech-item bg-white p-6 rounded-xl shadow-md flex flex-col items-center hover:-translate-y-1 transition-transform border border-gray-200 dark:border-gray-700"
-          >
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/matplotlib/matplotlib-original-wordmark.svg"
-              alt="Matplotlib"
-              class="w-16 h-16"
-            />
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <section id="projects" class="py-20 bg-bg-default dark:bg-dark-bg-default">
-      <div class="container mx-auto px-6">
-        <h2
-          data-aos="fade-up"
-          class="text-4xl font-bold text-center mb-16 relative text-text-default dark:text-dark-text-default"
-        >
-          My Projects
-        </h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-          <div
-            data-aos="slide-right"
-            class="bg-bg-card dark:bg-dark-bg-card rounded-xl overflow-hidden shadow-lg hover:-translate-y-2 transition-transform duration-300 border border-border-default dark:border-dark-border-default"
-          >
-            <div
-              class="bg-accent-default dark:bg-dark-accent-default flex items-center justify-center overflow-hidden"
-              style="height: auto; max-height: 250px"
-            >
-              <img
-                src="./assets/home.png"
-                alt="CatVault homepage"
-                class="w-full object-contain"
-              />
-            </div>
-            <div class="p-6">
-              <h3
-                class="text-xl font-bold mb-2 text-text-default dark:text-dark-text-default"
-              >
-                CatVault
-              </h3>
-              <p class="text-text-muted dark:text-dark-text-muted mb-6">
-                A password generator and manager built with Flask
-              </p>
-              <a
-                href="https://github.com/Baibhab-Adhikari/CatVault"
-                target="_blank"
-                class="inline-block bg-brand-primary text-white py-2 px-6 rounded-lg font-medium hover:opacity-90 transition-colors btn-glow"
-                >View on GitHub</a
-              >
-            </div>
-          </div>
-
-          <div
-            data-aos="slide-left"
-            class="bg-bg-card dark:bg-dark-bg-card rounded-xl overflow-hidden shadow-lg hover:-translate-y-2 transition-transform duration-300 border border-border-default dark:border-dark-border-default"
-          >
-            <div
-              class="bg-accent-default dark:bg-dark-accent-default flex items-center justify-center overflow-hidden"
-              style="height: auto; max-height: 250px"
-            >
-              <img
-                src="./assets/landing.png"
-                alt="ATS Eureka homepage"
-                class="w-full object-contain"
-              />
-            </div>
-            <div class="p-6">
-              <h3
-                class="text-xl font-bold mb-2 text-text-default dark:text-dark-text-default"
-              >
-                ATS Eureka
-              </h3>
-              <p class="text-text-muted dark:text-dark-text-muted mb-6">
-                ATS system made using FastAPI, MongoDB, Docker, Redis
-              </p>
-              <a
-                href="https://github.com/Baibhab-Adhikari/ATS-Eureka"
-                target="_blank"
-                class="inline-block bg-brand-primary text-white py-2 px-6 rounded-lg font-medium hover:opacity-90 transition-colors btn-glow"
-                >View on GitHub</a
-              >
-            </div>
-          </div>
+        <p class="text-text-muted dark:text-dark-text-muted mb-8"></p>
+        <div class="flex flex-wrap gap-4">
+          <a href="#contact"
+            class="bg-brand-primary hover:opacity-90 text-white py-3 px-8 rounded-lg font-medium shadow-md transition transform hover:-translate-y-0.5 btn-glow">Get
+            in Touch</a>
+          <a href="./assets/Baibhab_Adhikari_Resume.pdf" download
+            class="inline-flex items-center justify-center bg-bg-card dark:bg-dark-bg-card border-2 border-border-default dark:border-dark-border-default hover:bg-accent-default dark:hover:bg-dark-accent-default text-text-default dark:text-dark-text-default py-3 px-6 rounded-lg font-medium shadow-md transition transform hover:-translate-y-0.5 btn-glow"><i
+              class="fas fa-file-download mr-2"></i>Download Resume</a>
+          <a href="https://www.fiverr.com/s/1qeRqN0" target="_blank"
+            class="inline-flex items-center justify-center bg-[#1DBF73] hover:bg-[#18a364] text-white py-3 px-6 rounded-lg font-medium shadow-md transition transform hover:-translate-y-0.5 btn-glow"><i
+              class="fas fa-code mr-2"></i>Freelancing services on Fiverr</a>
         </div>
       </div>
-    </section>
-
-    <section id="achievements" class="py-20 bg-bg-card dark:bg-dark-bg-card">
-      <div class="container mx-auto px-6">
-        <h2
-          data-aos="fade-up"
-          class="text-4xl font-bold text-center mb-16 relative text-text-default dark:text-dark-text-default"
-        >
-          Certifications and Publications
-        </h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <a
-            href="https://cs50.harvard.edu/certificates/03991a8a-1ab0-4033-b4cb-2b76e6d28543"
-            target="_blank"
-            class="block cursor-pointer"
-            data-aos="slide-up"
-          >
-            <div
-              class="bg-bg-default dark:bg-dark-bg-default rounded-xl overflow-hidden shadow-lg hover:-translate-y-2 transition-transform duration-300 border border-border-default dark:border-dark-border-default"
-            >
-              <div
-                class="bg-accent-default dark:bg-dark-accent-default flex items-center justify-center overflow-hidden"
-                style="height: auto; max-height: 250px"
-              >
-                <img
-                  src="./assets/cs50x.png"
-                  alt="Harvard CS50X certificate"
-                  class="w-full object-contain p-2"
-                />
-              </div>
-              <div class="p-6">
-                <h3
-                  class="text-xl font-bold mb-2 text-text-default dark:text-dark-text-default"
-                >
-                  Introduction to Computer Science
-                </h3>
-                <p class="text-text-muted dark:text-dark-text-muted">
-                  Issued by Harvard University, 2024
-                </p>
-                <p class="text-brand-primary mt-2 text-sm hover:underline">
-                  Verify
-                </p>
-              </div>
-            </div>
-          </a>
-
-          <a
-            href="https://www.hackerrank.com/certificates/iframe/1113c2084b7e"
-            target="_blank"
-            class="block cursor-pointer"
-            data-aos="slide-up"
-          >
-            <div
-              class="bg-bg-default dark:bg-dark-bg-default rounded-xl overflow-hidden shadow-lg hover:-translate-y-2 transition-transform duration-300 border border-border-default dark:border-dark-border-default"
-            >
-              <div
-                class="bg-accent-default dark:bg-dark-accent-default flex items-center justify-center overflow-hidden"
-                style="height: auto; max-height: 250px"
-              >
-                <img
-                  src="./assets/py.jpg"
-                  alt="Python Certificate"
-                  class="w-full object-contain p-2"
-                />
-              </div>
-              <div class="p-6">
-                <h3
-                  class="text-xl font-bold mb-2 text-text-default dark:text-dark-text-default"
-                >
-                  Python (Basic)
-                </h3>
-                <p class="text-text-muted dark:text-dark-text-muted">
-                  Certified by Hackerrank
-                </p>
-                <p class="text-brand-primary mt-2 text-sm hover:underline">
-                  Verify
-                </p>
-              </div>
-            </div>
-          </a>
-
-          <a
-            href="https://www.hackerrank.com/certificates/iframe/295124dfac0f"
-            target="_blank"
-            class="block cursor-pointer"
-            data-aos="slide-up"
-          >
-            <div
-              class="bg-bg-default dark:bg-dark-bg-default rounded-xl overflow-hidden shadow-lg hover:-translate-y-2 transition-transform duration-300 border border-border-default dark:border-dark-border-default"
-            >
-              <div
-                class="bg-accent-default dark:bg-dark-accent-default flex items-center justify-center overflow-hidden"
-                style="height: auto; max-height: 250px"
-              >
-                <img
-                  src="./assets/sql_basic.jpg"
-                  alt="SQL Certificate"
-                  class="w-full object-contain p-2"
-                />
-              </div>
-              <div class="p-6">
-                <h3
-                  class="text-xl font-bold mb-2 text-text-default dark:text-dark-text-default"
-                >
-                  SQL (Basic)
-                </h3>
-                <p class="text-text-muted dark:text-dark-text-muted">
-                  Certified by Hackerrank
-                </p>
-                <p class="text-brand-primary mt-2 text-sm hover:underline">
-                  Verify
-                </p>
-              </div>
-            </div>
-          </a>
-          <a
-            href="https://link.springer.com/chapter/10.1007/978-3-031-87627-1_9"
-            target="_blank"
-            class="block cursor-pointer"
-            data-aos="slide-up"
-          >
-            <div
-              class="bg-bg-default dark:bg-dark-bg-default rounded-xl overflow-hidden shadow-lg hover:-translate-y-2 transition-transform duration-300 border border-border-default dark:border-dark-border-default"
-            >
-              <div
-                class="bg-accent-default dark:bg-dark-accent-default flex items-center justify-center overflow-hidden"
-                style="height: auto; max-height: 250px"
-              >
-                <img
-                  src="./assets/springer.png"
-                  alt="Springer Publication 1"
-                  class="w-full object-contain p-2"
-                />
-              </div>
-              <div class="p-6">
-                <h3
-                  class="text-xl font-bold mb-2 text-text-default dark:text-dark-text-default"
-                >
-                  A Survey on Driver’s Unusual Behaviour Detection
-                </h3>
-                <p class="text-text-muted dark:text-dark-text-muted">
-                  Book Chapter in Springer Nature
-                </p>
-                <p class="text-brand-primary mt-2 text-sm hover:underline">
-                  Chapter DOI
-                </p>
-              </div>
-            </div>
-          </a>
+      <div class="md:w-1/3 flex justify-center items-center md:mt-0 mt-12">
+        <div class="profile-image-container">
+          <img src="assets/img1.jpeg" alt="Baibhab Adhikari"
+            class="rounded-full w-80 h-80 object-cover border-4 border-bg-card dark:border-dark-bg-card shadow-lg" />
         </div>
+      </div>
+    </div>
+  </section>
 
-        <div class="mt-12 text-center">
-          <p
-            data-aos="flip-right"
-            class="text-text-muted dark:text-dark-text-muted mb-6"
-          >
-            View my complete list of certifications and achievements on LinkedIn
+  <section id="about" class="py-20 bg-bg-card dark:bg-dark-bg-card">
+    <div class="container mx-auto px-6 max-w-3xl">
+      <h2 data-aos="fade-up"
+        class="text-4xl font-bold text-center mb-16 relative text-text-default dark:text-dark-text-default">
+        About Me
+      </h2>
+      <p data-aos="fade-up" class="text-text-muted dark:text-dark-text-muted text-center mb-4">
+        I am an engineering student passionate about machine learning and AI
+        with a strong foundation in Python development. My goal is to become a
+        skilled ML engineer who can build intelligent systems that solve
+        real-world problems.
+      </p>
+      <p data-aos="fade-up" class="text-text-muted dark:text-dark-text-muted text-center mb-4">
+        Currently, I'm expanding my skill set by diving deep into backend
+        technologies and deployment strategies to create end-to-end ML
+        solutions that are both powerful and production-ready.
+      </p>
+      <p data-aos="fade-up" class="text-text-muted dark:text-dark-text-muted text-center">
+        My journey combines engineering fundamentals with continuous learning
+        in data science, helping me bridge the gap between theoretical models
+        and practical applications.
+      </p>
+    </div>
+  </section>
+
+  <!-- Experience section -->
+
+  <section id="experience" class="py-20 bg-bg-default dark:bg-dark-bg-default">
+    <div class="container mx-auto px-6">
+      <h2 data-aos="fade-up"
+        class="text-4xl font-bold text-center mb-16 relative text-text-default dark:text-dark-text-default">
+        My Experience
+      </h2>
+      <div class="max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+        <div
+          class="bg-bg-card dark:bg-dark-bg-card rounded-xl shadow-lg p-6 md:p-8 border border-border-default dark:border-dark-border-default">
+          <div class="flex justify-between items-start mb-2">
+            <h3 class="text-2xl font-bold text-text-default dark:text-dark-text-default">
+              Open Source Contributor
+            </h3>
+            <span
+              class="bg-green-100 text-green-800 text-sm font-semibold px-3 py-1 rounded-full dark:bg-green-900 dark:text-green-300">Ongoing</span>
+          </div>
+          <p class="text-lg font-semibold text-brand-primary dark:text-brand-primary mb-2">
+            GirlScript Summer of Code
           </p>
-          <a
-            data-aos="fade-up"
-            href="https://www.linkedin.com/in/baibhab-adhikari-3380bb297"
-            target="_blank"
-            class="inline-flex items-center justify-center bg-[#0077b5] hover:bg-[#005885] text-white py-3 px-8 rounded-lg font-medium shadow-md transition transform hover:-translate-y-0.5 btn-glow"
-          >
-            <i class="fab fa-linkedin-in mr-2"></i>View My LinkedIn Profile
+          <p class="text-sm text-text-muted dark:text-dark-text-muted mb-4">
+            July 2025 - Present
+          </p>
+          <p class="text-text-muted dark:text-dark-text-muted">
+            Actively contributing to various open-source projects, focusing on
+            backend development and API enhancements. Collaborating with
+            developers all over the nation to write clean, efficient code and
+            solve real-world problems.
+          </p>
+          <div class="mt-4 flex flex-wrap gap-2">
+            <span
+              class="bg-accent-default dark:bg-dark-accent-default text-text-muted dark:text-dark-text-muted text-xs font-semibold px-3 py-1 rounded-full">Python</span>
+            <span
+              class="bg-accent-default dark:bg-dark-accent-default text-text-muted dark:text-dark-text-muted text-xs font-semibold px-3 py-1 rounded-full">Git</span>
+            <span
+              class="bg-accent-default dark:bg-dark-accent-default text-text-muted dark:text-dark-text-muted text-xs font-semibold px-3 py-1 rounded-full">GitHub</span>
+            <span
+              class="bg-accent-default dark:bg-dark-accent-default text-text-muted dark:text-dark-text-muted text-xs font-semibold px-3 py-1 rounded-full">Flask</span>
+            <span
+              class="bg-accent-default dark:bg-dark-accent-default text-text-muted dark:text-dark-text-muted text-xs font-semibold px-3 py-1 rounded-full">Streamlit</span>
+          </div>
+          <div class="mt-6 text-right">
+            <a href="https://www.linkedin.com/in/baibhab-adhikari-3380bb297" target="_blank"
+              class="inline-flex items-center bg-[#0077b5] hover:bg-[#005885] text-white py-2 px-4 rounded-lg font-medium shadow-md transition transform hover:-translate-y-0.5 btn-glow text-sm">
+              <i class="fab fa-linkedin-in mr-2"></i>
+              Verify on LinkedIn
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> <!-- Tech Stack Section -->
+
+  <section id="tech-stack" class="py-20 bg-bg-default dark:bg-dark-bg-default">
+    <div class="container mx-auto px-6">
+      <h2 data-aos="fade-up"
+        class="text-4xl font-bold text-center mb-16 relative text-text-default dark:text-dark-text-default">
+        My Tech Stack
+      </h2>
+      <ul class="flex flex-wrap justify-center gap-6 md:gap-8">
+        <li data-aos="fade-up"
+          class="tech-item bg-white p-6 rounded-xl shadow-md flex flex-col items-center hover:-translate-y-1 transition-transform border border-gray-200 dark:border-gray-700">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original-wordmark.svg" alt="Python"
+            class="w-16 h-16" />
+        </li>
+        <li data-aos="fade-up"
+          class="tech-item bg-white p-6 rounded-xl shadow-md flex flex-col items-center hover:-translate-y-1 transition-transform border border-gray-200 dark:border-gray-700">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="C Programming Language"
+            class="w-16 h-16" />
+        </li>
+        <li data-aos="fade-up"
+          class="tech-item bg-white p-6 rounded-xl shadow-md flex flex-col items-center hover:-translate-y-1 transition-transform border border-gray-200 dark:border-gray-700">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original-wordmark.svg" alt="Numpy"
+            class="w-16 h-16" />
+        </li>
+        <li data-aos="fade-up"
+          class="tech-item bg-white p-6 rounded-xl shadow-md flex flex-col items-center hover:-translate-y-1 transition-transform border border-gray-200 dark:border-gray-700">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original-wordmark.svg" alt="Flask"
+            class="w-16 h-16" />
+        </li>
+        <li data-aos="fade-up"
+          class="tech-item bg-white p-6 rounded-xl shadow-md flex flex-col items-center hover:-translate-y-1 transition-transform border border-gray-200 dark:border-gray-700">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg" alt="MySQL"
+            class="w-16 h-16" />
+        </li>
+        <li data-aos="fade-up"
+          class="tech-item bg-white p-6 rounded-xl shadow-md flex flex-col items-center hover:-translate-y-1 transition-transform border border-gray-200 dark:border-gray-700">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original-wordmark.svg"
+            alt="PostgreSQL" class="w-16 h-16" />
+        </li>
+        <li data-aos="fade-up"
+          class="tech-item bg-white p-6 rounded-xl shadow-md flex flex-col items-center hover:-translate-y-1 transition-transform border border-gray-200 dark:border-gray-700">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original-wordmark.svg" alt="HTML"
+            class="w-16 h-16" />
+        </li>
+        <li data-aos="fade-up"
+          class="tech-item bg-white p-6 rounded-xl shadow-md flex flex-col items-center hover:-translate-y-1 transition-transform border border-gray-200 dark:border-gray-700">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original-wordmark.svg" alt="CSS"
+            class="w-16 h-16" />
+        </li>
+        <li data-aos="fade-up"
+          class="tech-item bg-white p-6 rounded-xl shadow-md flex flex-col items-center hover:-translate-y-1 transition-transform border border-gray-200 dark:border-gray-700">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/heroku/heroku-original-wordmark.svg" alt="Heroku"
+            class="w-16 h-16" />
+        </li>
+        <li data-aos="fade-up"
+          class="tech-item bg-white p-6 rounded-xl shadow-md flex flex-col items-center hover:-translate-y-1 transition-transform border border-gray-200 dark:border-gray-700">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original-wordmark.svg" alt="GIT"
+            class="w-16 h-16" />
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="exploring" class="py-20 bg-bg-card dark:bg-dark-bg-card">
+    <div class="container mx-auto px-6">
+      <h2 data-aos="fade-up"
+        class="text-4xl font-bold text-center mb-16 relative text-text-default dark:text-dark-text-default">
+        Currently Exploring
+      </h2>
+      <p data-aos="fade-up" class="text-text-muted dark:text-dark-text-muted text-center mb-10">
+        I'm currently enhancing my skills in these areas to build more robust
+        and scalable applications:
+      </p>
+      <ul class="flex flex-wrap justify-center gap-6 md:gap-8">
+        <li data-aos="fade-up"
+          class="tech-item bg-white p-6 rounded-xl shadow-md flex flex-col items-center hover:-translate-y-1 transition-transform border border-gray-200 dark:border-gray-700">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original-wordmark.svg" alt="Docker"
+            class="w-16 h-16" />
+        </li>
+        <li data-aos="fade-up"
+          class="tech-item bg-white p-6 rounded-xl shadow-md flex flex-col items-center hover:-translate-y-1 transition-transform border border-gray-200 dark:border-gray-700">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original-wordmark.svg"
+            alt="Postman" class="w-16 h-16" />
+        </li>
+        <li data-aos="fade-up"
+          class="tech-item bg-white p-6 rounded-xl shadow-md flex flex-col items-center hover:-translate-y-1 transition-transform border border-gray-200 dark:border-gray-700">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original-wordmark.svg"
+            alt="MongoDB" class="w-16 h-16" />
+        </li>
+
+        <li data-aos="fade-up"
+          class="tech-item bg-white p-6 rounded-xl shadow-md flex flex-col items-center hover:-translate-y-1 transition-transform border border-gray-200 dark:border-gray-700">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original-wordmark.svg" alt="Pandas"
+            class="w-16 h-16" />
+        </li>
+        <li data-aos="fade-up"
+          class="tech-item bg-white p-6 rounded-xl shadow-md flex flex-col items-center hover:-translate-y-1 transition-transform border border-gray-200 dark:border-gray-700">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/matplotlib/matplotlib-original-wordmark.svg"
+            alt="Matplotlib" class="w-16 h-16" />
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="projects" class="py-20 bg-bg-default dark:bg-dark-bg-default">
+    <div class="container mx-auto px-6">
+      <h2 data-aos="fade-up"
+        class="text-4xl font-bold text-center mb-16 relative text-text-default dark:text-dark-text-default">
+        My Projects
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div data-aos="slide-right"
+          class="bg-bg-card dark:bg-dark-bg-card rounded-xl overflow-hidden shadow-lg hover:-translate-y-2 transition-transform duration-300 border border-border-default dark:border-dark-border-default">
+          <div class="bg-accent-default dark:bg-dark-accent-default flex items-center justify-center overflow-hidden"
+            style="height: auto; max-height: 250px">
+            <img src="./assets/home.png" alt="CatVault homepage" class="w-full object-contain" />
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2 text-text-default dark:text-dark-text-default">
+              CatVault
+            </h3>
+            <p class="text-text-muted dark:text-dark-text-muted mb-6">
+              A password generator and manager built with Flask
+            </p>
+            <a href="https://github.com/Baibhab-Adhikari/CatVault" target="_blank"
+              class="inline-block bg-brand-primary text-white py-2 px-6 rounded-lg font-medium hover:opacity-90 transition-colors btn-glow">View
+              on GitHub</a>
+          </div>
+        </div>
+
+        <div data-aos="slide-left"
+          class="bg-bg-card dark:bg-dark-bg-card rounded-xl overflow-hidden shadow-lg hover:-translate-y-2 transition-transform duration-300 border border-border-default dark:border-dark-border-default">
+          <div class="bg-accent-default dark:bg-dark-accent-default flex items-center justify-center overflow-hidden"
+            style="height: auto; max-height: 250px">
+            <img src="./assets/landing.png" alt="ATS Eureka homepage" class="w-full object-contain" />
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2 text-text-default dark:text-dark-text-default">
+              ATS Eureka
+            </h3>
+            <p class="text-text-muted dark:text-dark-text-muted mb-6">
+              ATS system made using FastAPI, MongoDB, Docker, Redis
+            </p>
+            <a href="https://github.com/Baibhab-Adhikari/ATS-Eureka" target="_blank"
+              class="inline-block bg-brand-primary text-white py-2 px-6 rounded-lg font-medium hover:opacity-90 transition-colors btn-glow">View
+              on GitHub</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="achievements" class="py-20 bg-bg-card dark:bg-dark-bg-card">
+    <div class="container mx-auto px-6">
+      <h2 data-aos="fade-up"
+        class="text-4xl font-bold text-center mb-16 relative text-text-default dark:text-dark-text-default">
+        Certifications and Publications
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <a href="https://cs50.harvard.edu/certificates/03991a8a-1ab0-4033-b4cb-2b76e6d28543" target="_blank"
+          class="block cursor-pointer" data-aos="slide-up">
+          <div
+            class="bg-bg-default dark:bg-dark-bg-default rounded-xl overflow-hidden shadow-lg hover:-translate-y-2 transition-transform duration-300 border border-border-default dark:border-dark-border-default">
+            <div class="bg-accent-default dark:bg-dark-accent-default flex items-center justify-center overflow-hidden"
+              style="height: auto; max-height: 250px">
+              <img src="./assets/cs50x.png" alt="Harvard CS50X certificate" class="w-full object-contain p-2" />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2 text-text-default dark:text-dark-text-default">
+                Introduction to Computer Science
+              </h3>
+              <p class="text-text-muted dark:text-dark-text-muted">
+                Issued by Harvard University, 2024
+              </p>
+              <p class="text-brand-primary mt-2 text-sm hover:underline">
+                Verify
+              </p>
+            </div>
+          </div>
+        </a>
+
+        <a href="https://www.hackerrank.com/certificates/iframe/1113c2084b7e" target="_blank"
+          class="block cursor-pointer" data-aos="slide-up">
+          <div
+            class="bg-bg-default dark:bg-dark-bg-default rounded-xl overflow-hidden shadow-lg hover:-translate-y-2 transition-transform duration-300 border border-border-default dark:border-dark-border-default">
+            <div class="bg-accent-default dark:bg-dark-accent-default flex items-center justify-center overflow-hidden"
+              style="height: auto; max-height: 250px">
+              <img src="./assets/py.jpg" alt="Python Certificate" class="w-full object-contain p-2" />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2 text-text-default dark:text-dark-text-default">
+                Python (Basic)
+              </h3>
+              <p class="text-text-muted dark:text-dark-text-muted">
+                Certified by Hackerrank
+              </p>
+              <p class="text-brand-primary mt-2 text-sm hover:underline">
+                Verify
+              </p>
+            </div>
+          </div>
+        </a>
+
+        <a href="https://www.hackerrank.com/certificates/iframe/295124dfac0f" target="_blank"
+          class="block cursor-pointer" data-aos="slide-up">
+          <div
+            class="bg-bg-default dark:bg-dark-bg-default rounded-xl overflow-hidden shadow-lg hover:-translate-y-2 transition-transform duration-300 border border-border-default dark:border-dark-border-default">
+            <div class="bg-accent-default dark:bg-dark-accent-default flex items-center justify-center overflow-hidden"
+              style="height: auto; max-height: 250px">
+              <img src="./assets/sql_basic.jpg" alt="SQL Certificate" class="w-full object-contain p-2" />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2 text-text-default dark:text-dark-text-default">
+                SQL (Basic)
+              </h3>
+              <p class="text-text-muted dark:text-dark-text-muted">
+                Certified by Hackerrank
+              </p>
+              <p class="text-brand-primary mt-2 text-sm hover:underline">
+                Verify
+              </p>
+            </div>
+          </div>
+        </a>
+        <a href="https://link.springer.com/chapter/10.1007/978-3-031-87627-1_9" target="_blank"
+          class="block cursor-pointer" data-aos="slide-up">
+          <div
+            class="bg-bg-default dark:bg-dark-bg-default rounded-xl overflow-hidden shadow-lg hover:-translate-y-2 transition-transform duration-300 border border-border-default dark:border-dark-border-default">
+            <div class="bg-accent-default dark:bg-dark-accent-default flex items-center justify-center overflow-hidden"
+              style="height: auto; max-height: 250px">
+              <img src="./assets/springer.png" alt="Springer Publication 1" class="w-full object-contain p-2" />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2 text-text-default dark:text-dark-text-default">
+                A Survey on Driver’s Unusual Behaviour Detection
+              </h3>
+              <p class="text-text-muted dark:text-dark-text-muted">
+                Book Chapter in Springer Nature
+              </p>
+              <p class="text-brand-primary mt-2 text-sm hover:underline">
+                Chapter DOI
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="mt-12 text-center">
+        <p data-aos="flip-right" class="text-text-muted dark:text-dark-text-muted mb-6">
+          View my complete list of certifications and achievements on LinkedIn
+        </p>
+        <a data-aos="fade-up" href="https://www.linkedin.com/in/baibhab-adhikari-3380bb297" target="_blank"
+          class="inline-flex items-center justify-center bg-[#0077b5] hover:bg-[#005885] text-white py-3 px-8 rounded-lg font-medium shadow-md transition transform hover:-translate-y-0.5 btn-glow">
+          <i class="fab fa-linkedin-in mr-2"></i>View My LinkedIn Profile
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="py-20 bg-bg-default dark:bg-dark-bg-default">
+    <div class="container mx-auto px-6">
+      <h2 data-aos="fade-up"
+        class="text-4xl font-bold text-center mb-16 relative text-text-default dark:text-dark-text-default">
+        Lets Get In Touch!
+      </h2>
+      <div class="flex flex-col md:flex-row gap-8">
+        <div class="md:w-1/2" data-aos="fade-up">
+          <form id="contact-form" class="space-y-6" action="https://formsubmit.co/baibhabadhikari.dev@outlook.com"
+            method="POST">
+            <input type="text" id="name" name="name" placeholder="Your Name" required
+              class="w-full p-3 border border-border-default dark:border-dark-border-default rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-primary bg-bg-card dark:bg-dark-bg-card text-text-default dark:text-dark-text-default placeholder-text-muted dark:placeholder-dark-text-muted" />
+            <input type="email" id="email" name="email" placeholder="Your Email" required
+              class="w-full p-3 border border-border-default dark:border-dark-border-default rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-primary bg-bg-card dark:bg-dark-bg-card text-text-default dark:text-dark-text-default placeholder-text-muted dark:placeholder-dark-text-muted" />
+            <input type="text" id="subject" name="subject" placeholder="Your Subject" required
+              class="w-full p-3 border border-border-default dark:border-dark-border-default rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-primary bg-bg-card dark:bg-dark-bg-card text-text-default dark:text-dark-text-default placeholder-text-muted dark:placeholder-dark-text-muted" />
+            <textarea id="message" name="message" placeholder="Your Message" required
+              class="w-full p-3 border border-border-default dark:border-dark-border-default rounded-lg h-40 resize-none focus:outline-none focus:ring-2 focus:ring-brand-primary bg-bg-card dark:bg-dark-bg-card text-text-default dark:text-dark-text-default placeholder-text-muted dark:placeholder-dark-text-muted"></textarea>
+            <div id="form-status" class="hidden rounded-lg p-3 text-center"></div>
+            <button type="submit" id="submit-btn"
+              class="w-full py-3 px-6 bg-brand-primary text-white rounded-lg font-medium hover:opacity-90 transition-colors btn-glow">
+              Send Message
+            </button>
+          </form>
+        </div>
+        <div class="md:w-1/2 mt-8 md:mt-0" data-aos="fade-up" data-aos-delay="100">
+          <div id="map" class="h-96 w-full rounded-lg shadow-lg"></div>
+          <p class="mt-4 text-text-muted dark:text-dark-text-muted text-center">
+            Based in Kolkata, West Bengal, India
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="py-12 bg-bg-card dark:bg-dark-bg-card text-text-muted dark:text-dark-text-muted">
+    <div class="container mx-auto px-6">
+      <div class="flex flex-col md:flex-row md:justify-between items-center">
+        <div class="flex flex-col items-center md:items-start mb-6 md:mb-0">
+          <p class="text-text-muted dark:text-dark-text-muted mb-4">
+            &copy; 2025 Baibhab Adhikari. All rights reserved.
+          </p>
+          <a href="./assets/Baibhab_Adhikari_Resume.pdf" download
+            class="inline-flex items-center justify-center bg-accent-default dark:bg-dark-accent-default hover:opacity-80 text-text-default dark:text-dark-text-default py-2 px-5 rounded-lg transition-colors duration-300">
+            <i class="fas fa-file-download mr-2"></i>Download Resume
+          </a>
+        </div>
+
+        <div class="flex space-x-4">
+          <a href="https://github.com/Baibhab-Adhikari" target="_blank"
+            class="social-icon-hover w-10 h-10 rounded-full flex items-center justify-center transition-colors duration-300 text-text-muted dark:text-dark-text-muted hover:text-brand-primary dark:hover:text-brand-primary"
+            aria-label="GitHub">
+            <i class="fab fa-github text-lg"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/baibhab-adhikari-3380bb297" target="_blank"
+            class="social-icon-hover w-10 h-10 rounded-full flex items-center justify-center transition-colors duration-300 text-text-muted dark:text-dark-text-muted hover:text-brand-primary dark:hover:text-brand-primary"
+            aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in text-lg"></i>
+          </a>
+          <a href="mailto:baibhabadhikari.dev@outlook.com" target="_blank"
+            class="social-icon-hover w-10 h-10 rounded-full flex items-center justify-center transition-colors duration-300 text-text-muted dark:text-dark-text-muted hover:text-brand-primary dark:hover:text-brand-primary"
+            aria-label="Email">
+            <i class="fas fa-envelope text-lg"></i>
           </a>
         </div>
       </div>
-    </section>
+    </div>
+  </footer>
 
-    <section id="contact" class="py-20 bg-bg-default dark:bg-dark-bg-default">
-      <div class="container mx-auto px-6">
-        <h2
-          data-aos="fade-up"
-          class="text-4xl font-bold text-center mb-16 relative text-text-default dark:text-dark-text-default"
-        >
-          Lets Get In Touch!
-        </h2>
-        <div class="flex flex-col md:flex-row gap-8">
-          <div class="md:w-1/2" data-aos="slide-right">
-            <form
-              id="contact-form"
-              class="space-y-6"
-              action="https://formsubmit.co/baibhabadhikari.dev@outlook.com"
-              method="POST"
-            >
-              <input
-                type="text"
-                id="name"
-                name="name"
-                placeholder="Your Name"
-                required
-                class="w-full p-3 border border-border-default dark:border-dark-border-default rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-primary bg-bg-card dark:bg-dark-bg-card text-text-default dark:text-dark-text-default placeholder-text-muted dark:placeholder-dark-text-muted"
-              />
-              <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="Your Email"
-                required
-                class="w-full p-3 border border-border-default dark:border-dark-border-default rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-primary bg-bg-card dark:bg-dark-bg-card text-text-default dark:text-dark-text-default placeholder-text-muted dark:placeholder-dark-text-muted"
-              />
-              <input
-                type="text"
-                id="subject"
-                name="subject"
-                placeholder="Your Subject"
-                required
-                class="w-full p-3 border border-border-default dark:border-dark-border-default rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-primary bg-bg-card dark:bg-dark-bg-card text-text-default dark:text-dark-text-default placeholder-text-muted dark:placeholder-dark-text-muted"
-              />
-              <textarea
-                id="message"
-                name="message"
-                placeholder="Your Message"
-                required
-                class="w-full p-3 border border-border-default dark:border-dark-border-default rounded-lg h-40 resize-none focus:outline-none focus:ring-2 focus:ring-brand-primary bg-bg-card dark:bg-dark-bg-card text-text-default dark:text-dark-text-default placeholder-text-muted dark:placeholder-dark-text-muted"
-              ></textarea>
-              <div
-                id="form-status"
-                class="hidden rounded-lg p-3 text-center"
-              ></div>
-              <button
-                type="submit"
-                id="submit-btn"
-                class="w-full py-3 px-6 bg-brand-primary text-white rounded-lg font-medium hover:opacity-90 transition-colors btn-glow"
-              >
-                Send Message
-              </button>
-            </form>
-          </div>
-          <div class="md:w-1/2 mt-8 md:mt-0" data-aos="slide-left">
-            <div id="map" class="h-96 w-full rounded-lg shadow-lg"></div>
-            <p
-              class="mt-4 text-text-muted dark:text-dark-text-muted text-center"
-            >
-              Based in Kolkata, West Bengal, India
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script src="script.js"></script>
+</body>
 
-    <footer
-      class="py-12 bg-bg-card dark:bg-dark-bg-card text-text-muted dark:text-dark-text-muted"
-    >
-      <div class="container mx-auto px-6">
-        <div class="flex flex-col md:flex-row md:justify-between items-center">
-          <div class="flex flex-col items-center md:items-start mb-6 md:mb-0">
-            <p class="text-text-muted dark:text-dark-text-muted mb-4">
-              &copy; 2025 Baibhab Adhikari. All rights reserved.
-            </p>
-            <a
-              href="./assets/Baibhab_Adhikari_Resume.pdf"
-              download
-              class="inline-flex items-center justify-center bg-accent-default dark:bg-dark-accent-default hover:opacity-80 text-text-default dark:text-dark-text-default py-2 px-5 rounded-lg transition-colors duration-300"
-            >
-              <i class="fas fa-file-download mr-2"></i>Download Resume
-            </a>
-          </div>
-
-          <div class="flex space-x-4">
-            <a
-              href="https://github.com/Baibhab-Adhikari"
-              target="_blank"
-              class="social-icon-hover w-10 h-10 rounded-full flex items-center justify-center transition-colors duration-300 text-text-muted dark:text-dark-text-muted hover:text-brand-primary dark:hover:text-brand-primary"
-              aria-label="GitHub"
-            >
-              <i class="fab fa-github text-lg"></i>
-            </a>
-            <a
-              href="https://www.linkedin.com/in/baibhab-adhikari-3380bb297"
-              target="_blank"
-              class="social-icon-hover w-10 h-10 rounded-full flex items-center justify-center transition-colors duration-300 text-text-muted dark:text-dark-text-muted hover:text-brand-primary dark:hover:text-brand-primary"
-              aria-label="LinkedIn"
-            >
-              <i class="fab fa-linkedin-in text-lg"></i>
-            </a>
-            <a
-              href="mailto:baibhabadhikari.dev@outlook.com"
-              target="_blank"
-              class="social-icon-hover w-10 h-10 rounded-full flex items-center justify-center transition-colors duration-300 text-text-muted dark:text-dark-text-muted hover:text-brand-primary dark:hover:text-brand-primary"
-              aria-label="Email"
-            >
-              <i class="fas fa-envelope text-lg"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-    </footer>
-
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-      AOS.init();
-    </script>
-    <script src="script.js"></script>
-  </body>
 </html>
