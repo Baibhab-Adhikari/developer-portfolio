@@ -177,7 +177,7 @@
       </div>
     </div>
   </section>
-
+  <!-- about section -->
   <section id="about" class="py-20 bg-bg-card dark:bg-dark-bg-card">
     <div class="container mx-auto px-6 max-w-3xl">
       <h2 data-aos="fade-up"
@@ -244,6 +244,10 @@
               class="bg-accent-default dark:bg-dark-accent-default text-text-muted dark:text-dark-text-muted text-xs font-semibold px-3 py-1 rounded-full">Flask</span>
             <span
               class="bg-accent-default dark:bg-dark-accent-default text-text-muted dark:text-dark-text-muted text-xs font-semibold px-3 py-1 rounded-full">Streamlit</span>
+            <span
+              class="bg-accent-default dark:bg-dark-accent-default text-text-muted dark:text-dark-text-muted text-xs font-semibold px-3 py-1 rounded-full">HTML</span>
+            <span
+              class="bg-accent-default dark:bg-dark-accent-default text-text-muted dark:text-dark-text-muted text-xs font-semibold px-3 py-1 rounded-full">CSS</span>
           </div>
           <div class="mt-6 text-right">
             <a href="https://www.linkedin.com/in/baibhab-adhikari-3380bb297" target="_blank"
@@ -314,6 +318,11 @@
           <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original-wordmark.svg" alt="GIT"
             class="w-16 h-16" />
         </li>
+        <li data-aos="fade-up"
+          class="tech-item bg-white p-6 rounded-xl shadow-md flex flex-col items-center hover:-translate-y-1 transition-transform border border-gray-200 dark:border-gray-700">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original-wordmark.svg"
+            alt="Postman" class="w-16 h-16" />
+        </li>
       </ul>
     </div>
   </section>
@@ -333,11 +342,6 @@
           class="tech-item bg-white p-6 rounded-xl shadow-md flex flex-col items-center hover:-translate-y-1 transition-transform border border-gray-200 dark:border-gray-700">
           <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original-wordmark.svg" alt="Docker"
             class="w-16 h-16" />
-        </li>
-        <li data-aos="fade-up"
-          class="tech-item bg-white p-6 rounded-xl shadow-md flex flex-col items-center hover:-translate-y-1 transition-transform border border-gray-200 dark:border-gray-700">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original-wordmark.svg"
-            alt="Postman" class="w-16 h-16" />
         </li>
         <li data-aos="fade-up"
           class="tech-item bg-white p-6 rounded-xl shadow-md flex flex-col items-center hover:-translate-y-1 transition-transform border border-gray-200 dark:border-gray-700">
@@ -414,89 +418,160 @@
         Certifications and Publications
       </h2>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Card 1: Harvard CS50X -->
         <a href="https://cs50.harvard.edu/certificates/03991a8a-1ab0-4033-b4cb-2b76e6d28543" target="_blank"
           class="block cursor-pointer" data-aos="slide-up">
           <div
-            class="bg-bg-default dark:bg-dark-bg-default rounded-xl overflow-hidden shadow-lg hover:-translate-y-2 transition-transform duration-300 border border-border-default dark:border-dark-border-default">
-            <div class="bg-accent-default dark:bg-dark-accent-default flex items-center justify-center overflow-hidden"
-              style="height: auto; max-height: 250px">
-              <img src="./assets/cs50x.png" alt="Harvard CS50X certificate" class="w-full object-contain p-2" />
+            class="bg-bg-default dark:bg-dark-bg-default rounded-xl overflow-hidden shadow-lg hover:-translate-y-2 transition-transform duration-300 border border-border-default dark:border-dark-border-default flex flex-col h-full">
+            <div
+              class="bg-accent-default dark:bg-dark-accent-default flex items-center justify-center overflow-hidden h-56">
+              <img src="./assets/cs50x.png" alt="Harvard CS50X certificate" class="w-full h-full object-contain p-2" />
             </div>
-            <div class="p-6">
+            <div class="p-6 flex flex-col flex-grow">
               <h3 class="text-xl font-bold mb-2 text-text-default dark:text-dark-text-default">
                 Introduction to Computer Science
               </h3>
               <p class="text-text-muted dark:text-dark-text-muted">
                 Issued by Harvard University, 2024
               </p>
-              <p class="text-brand-primary mt-2 text-sm hover:underline">
-                Verify
-              </p>
+              <!-- Centered button at the bottom -->
+              <div class="mt-auto flex justify-center pt-4">
+                <span
+                  class="inline-block bg-brand-primary text-white py-2 px-6 rounded-lg font-medium hover:opacity-90 transition-colors btn-glow text-sm">
+                  Verify
+                </span>
+              </div>
             </div>
           </div>
         </a>
 
+        <!-- Card 2: Python (Basic) -->
         <a href="https://www.hackerrank.com/certificates/iframe/1113c2084b7e" target="_blank"
           class="block cursor-pointer" data-aos="slide-up">
           <div
-            class="bg-bg-default dark:bg-dark-bg-default rounded-xl overflow-hidden shadow-lg hover:-translate-y-2 transition-transform duration-300 border border-border-default dark:border-dark-border-default">
-            <div class="bg-accent-default dark:bg-dark-accent-default flex items-center justify-center overflow-hidden"
-              style="height: auto; max-height: 250px">
-              <img src="./assets/py.jpg" alt="Python Certificate" class="w-full object-contain p-2" />
+            class="bg-bg-default dark:bg-dark-bg-default rounded-xl overflow-hidden shadow-lg hover:-translate-y-2 transition-transform duration-300 border border-border-default dark:border-dark-border-default flex flex-col h-full">
+            <div
+              class="bg-accent-default dark:bg-dark-accent-default flex items-center justify-center overflow-hidden h-56">
+              <img src="./assets/py.jpg" alt="Python Certificate" class="w-full h-full object-contain p-2" />
             </div>
-            <div class="p-6">
+            <div class="p-6 flex flex-col flex-grow">
               <h3 class="text-xl font-bold mb-2 text-text-default dark:text-dark-text-default">
                 Python (Basic)
               </h3>
               <p class="text-text-muted dark:text-dark-text-muted">
                 Certified by Hackerrank
               </p>
-              <p class="text-brand-primary mt-2 text-sm hover:underline">
-                Verify
-              </p>
+              <div class="mt-auto flex justify-center pt-4">
+                <span
+                  class="inline-block bg-brand-primary text-white py-2 px-6 rounded-lg font-medium hover:opacity-90 transition-colors btn-glow text-sm">
+                  Verify
+                </span>
+              </div>
             </div>
           </div>
         </a>
 
+        <!-- Card 3: SQL (Basic) -->
         <a href="https://www.hackerrank.com/certificates/iframe/295124dfac0f" target="_blank"
           class="block cursor-pointer" data-aos="slide-up">
           <div
-            class="bg-bg-default dark:bg-dark-bg-default rounded-xl overflow-hidden shadow-lg hover:-translate-y-2 transition-transform duration-300 border border-border-default dark:border-dark-border-default">
-            <div class="bg-accent-default dark:bg-dark-accent-default flex items-center justify-center overflow-hidden"
-              style="height: auto; max-height: 250px">
-              <img src="./assets/sql_basic.jpg" alt="SQL Certificate" class="w-full object-contain p-2" />
+            class="bg-bg-default dark:bg-dark-bg-default rounded-xl overflow-hidden shadow-lg hover:-translate-y-2 transition-transform duration-300 border border-border-default dark:border-dark-border-default flex flex-col h-full">
+            <div
+              class="bg-accent-default dark:bg-dark-accent-default flex items-center justify-center overflow-hidden h-56">
+              <img src="./assets/sql_basic.jpg" alt="SQL Certificate" class="w-full h-full object-contain p-2" />
             </div>
-            <div class="p-6">
+            <div class="p-6 flex flex-col flex-grow">
               <h3 class="text-xl font-bold mb-2 text-text-default dark:text-dark-text-default">
                 SQL (Basic)
               </h3>
               <p class="text-text-muted dark:text-dark-text-muted">
                 Certified by Hackerrank
               </p>
-              <p class="text-brand-primary mt-2 text-sm hover:underline">
-                Verify
-              </p>
+              <div class="mt-auto flex justify-center pt-4">
+                <span
+                  class="inline-block bg-brand-primary text-white py-2 px-6 rounded-lg font-medium hover:opacity-90 transition-colors btn-glow text-sm">
+                  Verify
+                </span>
+              </div>
             </div>
           </div>
         </a>
+
+        <!-- Card 4: Springer Publication -->
         <a href="https://link.springer.com/chapter/10.1007/978-3-031-87627-1_9" target="_blank"
           class="block cursor-pointer" data-aos="slide-up">
           <div
-            class="bg-bg-default dark:bg-dark-bg-default rounded-xl overflow-hidden shadow-lg hover:-translate-y-2 transition-transform duration-300 border border-border-default dark:border-dark-border-default">
-            <div class="bg-accent-default dark:bg-dark-accent-default flex items-center justify-center overflow-hidden"
-              style="height: auto; max-height: 250px">
-              <img src="./assets/springer.png" alt="Springer Publication 1" class="w-full object-contain p-2" />
+            class="bg-bg-default dark:bg-dark-bg-default rounded-xl overflow-hidden shadow-lg hover:-translate-y-2 transition-transform duration-300 border border-border-default dark:border-dark-border-default flex flex-col h-full">
+            <div
+              class="bg-accent-default dark:bg-dark-accent-default flex items-center justify-center overflow-hidden h-56">
+              <img src="./assets/springer.png" alt="Springer Publication 1" class="w-full h-full object-contain p-2" />
             </div>
-            <div class="p-6">
+            <div class="p-6 flex flex-col flex-grow">
               <h3 class="text-xl font-bold mb-2 text-text-default dark:text-dark-text-default">
                 A Survey on Driver’s Unusual Behaviour Detection
               </h3>
               <p class="text-text-muted dark:text-dark-text-muted">
                 Book Chapter in Springer Nature
               </p>
-              <p class="text-brand-primary mt-2 text-sm hover:underline">
-                Chapter DOI
+              <div class="mt-auto flex justify-center pt-4">
+                <span
+                  class="inline-block bg-brand-primary text-white py-2 px-6 rounded-lg font-medium hover:opacity-90 transition-colors btn-glow text-sm">
+                  Chapter DOI
+                </span>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <!-- Card 5: Postman Student Expert -->
+        <a href="https://badgr.com/public/assertions/-88YMiduQwWipnYlGvvWTw" target="_blank"
+          class="block cursor-pointer" data-aos="slide-up">
+          <div
+            class="bg-bg-default dark:bg-dark-bg-default rounded-xl overflow-hidden shadow-lg hover:-translate-y-2 transition-transform duration-300 border border-border-default dark:border-dark-border-default flex flex-col h-full">
+            <div
+              class="bg-accent-default dark:bg-dark-accent-default flex items-center justify-center overflow-hidden h-56">
+              <img src="./assets/postman.png" alt="Postman Student Expert Badge"
+                class="w-full h-full object-contain p-2" />
+            </div>
+            <div class="p-6 flex flex-col flex-grow">
+              <h3 class="text-xl font-bold mb-2 text-text-default dark:text-dark-text-default">
+                Postman Student Expert
+              </h3>
+              <p class="text-text-muted dark:text-dark-text-muted">
+                Issued by Postman
               </p>
+              <div class="mt-auto flex justify-center pt-4">
+                <span
+                  class="inline-block bg-brand-primary text-white py-2 px-6 rounded-lg font-medium hover:opacity-90 transition-colors btn-glow text-sm">
+                  Verify
+                </span>
+              </div>
+            </div>
+          </div>
+        </a>
+        <!-- Card 6: RESTful APIs in Flask -->
+        <a href="https://www.udemy.com/certificate/UC-4ac3fda9-04a5-453d-aef0-5351d51ca053/" target="_blank"
+          class="block cursor-pointer" data-aos="slide-up">
+          <div
+            class="bg-bg-default dark:bg-dark-bg-default rounded-xl overflow-hidden shadow-lg hover:-translate-y-2 transition-transform duration-300 border border-border-default dark:border-dark-border-default flex flex-col h-full">
+            <div
+              class="bg-accent-default dark:bg-dark-accent-default flex items-center justify-center overflow-hidden h-56">
+              <img src="./assets/REST_api_flask.jpg" alt="Postman Student Expert Badge"
+                class="w-full h-full object-contain p-2" />
+            </div>
+            <div class="p-6 flex flex-col flex-grow">
+              <h3 class="text-xl font-bold mb-2 text-text-default dark:text-dark-text-default">
+                REST APIs with Flask and Python
+              </h3>
+              <p class="text-text-muted dark:text-dark-text-muted">
+                Issued by Udemy
+              </p>
+              <div class="mt-auto flex justify-center pt-4">
+                <span
+                  class="inline-block bg-brand-primary text-white py-2 px-6 rounded-lg font-medium hover:opacity-90 transition-colors btn-glow text-sm">
+                  Verify
+                </span>
+              </div>
             </div>
           </div>
         </a>
@@ -513,6 +588,7 @@
       </div>
     </div>
   </section>
+
 
   <section id="contact" class="py-20 bg-bg-default dark:bg-dark-bg-default">
     <div class="container mx-auto px-6">
